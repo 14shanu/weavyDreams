@@ -1,0 +1,35 @@
+{
+  "brand": {
+    "label": "SHOWMAN",
+    "href": "#hero"
+  },
+  "links": [
+    { "label": "Home", "href": "#hero" },
+    { "label": "Our Work", "href": "#our-work" },
+    { "label": "What We Do", "href": "#what-we-do" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "footer": {
+    "copyrightLabel": "Showman. All rights reserved.",
+    "rightText": "Built on a configurable Next.js template.",
+    "columns": [
+      {
+        "title": "Pages",
+        "links": [
+          { "label": "Home", "href": "#hero" },
+          { "label": "Our Work", "href": "#our-work" },
+          { "label": "What We Do", "href": "#what-we-do" },
+          { "label": "Contact", "href": "#contact" }
+        ]
+      },
+      {
+        "title": "Social",
+        "links": [
+          { "label": "Facebook", "href": "https://facebook.com" },
+          { "label": "Instagram", "href": "https://instagram.com" },
+          { "label": "LinkedIn", "href": "https://linkedin.com" }
+        ]
+      }
+    ]
+  }
+}

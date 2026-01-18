@@ -1,0 +1,20 @@
+{
+  "name": "default",
+  "colors": {
+    "background": "#0b1724",
+    "backgroundAlt": "#ffffff",
+    "primary": "#7fb3ff",
+    "primaryDark": "#436aa3",
+    "text": "#f9fafb",
+    "textDark": "#111827",
+    "accent": "#f97316"
+  },
+  "fonts": {
+    "heading": "'Playfair Display', serif",
+    "body": "'Inter', sans-serif"
+  },
+  "radius": {
+    "button": "9999px",
+    "card": "16px"
+  }
+}

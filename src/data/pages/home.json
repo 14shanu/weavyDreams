@@ -1,0 +1,84 @@
+{
+  "slug": "home",
+  "seo": {
+    "title": "Showman Events – From Conception to Execution",
+    "description": "Event production company bringing ideas to life, from concept to execution."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "hero",
+      "heading": "From Conceptional to Execution",
+      "subheading": "From Nothing to Something",
+      "backgroundImage": "/images/hero.jpg",
+      "cta": {
+        "label": "Enquiry Now",
+        "href": "#contact"
+      }
+    },
+    {
+      "type": "workGrid",
+      "id": "our-work",
+      "title": "Our Work",
+      "items": [
+        {
+          "label": "Expo Booth",
+          "image": "/images/work-expo-booth.jpg",
+          "slug": "expo-booth"
+        },
+        {
+          "label": "Gala Dinner",
+          "image": "/images/work-gala-dinner.jpg",
+          "slug": "gala-dinner"
+        },
+        {
+          "label": "Hotel Decoration",
+          "image": "/images/work-hotel-decoration.jpg",
+          "slug": "hotel-decoration"
+        },
+        {
+          "label": "Branded Booth",
+          "image": "/images/work-branded-booth.jpg",
+          "slug": "branded-booth"
+        },
+        {
+          "label": "Concerts",
+          "image": "/images/work-concerts.jpg",
+          "slug": "concerts"
+        },
+        {
+          "label": "Outdoor Decoration",
+          "image": "/images/work-outdoor-decoration.jpg",
+          "slug": "outdoor-decoration"
+        },
+        {
+          "label": "Press Conference",
+          "image": "/images/work-press-conference.jpg",
+          "slug": "press-conference"
+        },
+        {
+          "label": "Weddings",
+          "image": "/images/work-weddings.jpg",
+          "slug": "weddings"
+        }
+      ]
+    },
+    {
+      "type": "whatWeDo",
+      "id": "what-we-do",
+      "title": "What We Do",
+      "body": [
+        "We are a creative and experienced event production company that brings ideas to life, from concept to execution.",
+        "Whether it's a corporate event or a private celebration, we approach each project with strategic clarity, creative vision, and precision.",
+        "Our team is passionate about crafting events that not only look stunning, but also feel meaningful and memorable."
+      ],
+      "image": "/images/what-we-do.jpg"
+    },
+    {
+      "type": "contact",
+      "id": "contact",
+      "title": "Contact Us",
+      "description": "Tell us a bit about your project and we’ll get back to you."
+    }
+  ]
+}
