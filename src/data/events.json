@@ -1,0 +1,71 @@
+{
+  "eventTypes": [
+    {
+      "id": "corporate",
+      "name": "Corporate",
+      "slug": "corporate-events",
+      "description": "Professional event solutions for conferences, galas and brand activations.",
+      "heroImage": "/images/events/corporate-hero.jpg",
+      "seo": {
+        "title": "Corporate Event Products | Showman",
+        "description": "Explore entertainment, lighting, staging and more for your corporate events."
+      },
+      "helpfulLinks": [
+        {
+          "label": "Corporate Event Management",
+          "href": "/services/corporate-management"
+        },
+        {
+          "label": "Corporate Event Styling",
+          "href": "/services/corporate-styling"
+        },
+        {
+          "label": "Build Your Own Package",
+          "href": "/packages/build-your-own"
+        }
+      ],
+      "categories": [
+        {
+          "id": "entertainment",
+          "name": "Entertainment",
+          "slug": "entertainment",
+          "description": "Live performers, DJs and interactive experiences.",
+          "products": [
+            {
+              "id": "corporate-djs",
+              "name": "Corporate DJs",
+              "slug": "corporate-djs",
+              "shortDescription": "Professional DJs tailored for corporate audiences.",
+              "image": "/images/products/corporate-djs.jpg",
+              "seo": {
+                "title": "Corporate DJs for Events | Showman",
+                "description": "Book experienced DJs for your next corporate event, conference or gala dinner."
+              }
+            },
+            {
+              "id": "corporate-mcs",
+              "name": "Corporate MCs",
+              "slug": "corporate-mcs",
+              "shortDescription": "Engaging MCs to host and guide your corporate event."
+            }
+          ]
+        },
+        {
+          "id": "lighting",
+          "name": "Lighting",
+          "slug": "lighting",
+          "description": "Atmospheric and feature lighting for any venue.",
+          "products": [
+            {
+              "id": "led-light-tunnel",
+              "name": "LED Light Tunnel",
+              "slug": "led-light-tunnel",
+              "shortDescription": "Create a dramatic entrance with a full LED light tunnel.",
+              "image": "/images/products/led-light-tunnel.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
