@@ -5,28 +5,27 @@ export default function HeroSection(props: HeroSectionConfig) {
   const { heading, subheading, backgroundImage, cta } = props;
 
   return (
-    <section className="relative h-[60vh] min-h-[420px] sm:h-[70vh] sm:min-h-[480px] text-center flex items-center justify-center">
+    <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
       <Image
         src={backgroundImage}
         alt={heading}
         fill
-        className="object-cover"
+        className="object-cover opacity-30"
         priority
       />
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 max-w-3xl px-4">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold font-[var(--font-heading)] tracking-wide text-white">
+      <div className="relative z-10 max-w-5xl px-6 text-center">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
           {heading}
         </h1>
         {subheading && (
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-2xl text-white/90">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white mb-10 font-light">
             {subheading}
           </p>
         )}
         {cta && (
           <a
             href={cta.href}
-            className="inline-flex mt-6 sm:mt-8 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-[var(--color-primary)] text-[var(--color-text-dark)] text-xs sm:text-sm font-medium shadow-lg hover:bg-[var(--color-primary-dark)] transition"
+            className="inline-flex px-10 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all transform hover:-translate-y-1"
           >
             {cta.label}
           </a>

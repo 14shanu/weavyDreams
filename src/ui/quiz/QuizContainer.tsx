@@ -47,28 +47,32 @@ export default function QuizContainer({ quizData }: QuizContainerProps) {
   };
 
   return (
-    <Section background="alt" spacing="lg">
+    <section className="min-h-screen py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
       <Container size="md">
         <FadeIn>
-          <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-[var(--font-heading)] mb-2">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+              🎯 Find Your Perfect Match
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {quiz.title}
             </h1>
-            <p className="text-gray-600">{quiz.description}</p>
+            <p className="text-xl text-gray-600">{quiz.description}</p>
           </div>
 
           <QuizProgress current={currentQuestion} total={quiz.questions.length} />
 
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-100">
             <QuizQuestion
               question={currentQ}
               value={currentAnswer?.value || (currentQ.type === 'multiple-choice' ? [] : '')}
               onChange={(value) => setAnswer(currentQ.id, value)}
             />
 
-            <div className="flex justify-between mt-8 pt-6 border-t">
+            <div className="flex justify-between mt-10 pt-8 border-t-2 border-gray-100">
               <Button
                 variant="ghost"
+                size="lg"
                 onClick={previousQuestion}
                 disabled={currentQuestion === 0}
               >
@@ -76,15 +80,16 @@ export default function QuizContainer({ quizData }: QuizContainerProps) {
               </Button>
               <Button
                 variant="primary"
+                size="lg"
                 onClick={handleNext}
                 disabled={!canProceed}
               >
-                {isLastQuestion ? 'See Results' : 'Next →'}
+                {isLastQuestion ? 'See Results ✨' : 'Next →'}
               </Button>
             </div>
           </div>
         </FadeIn>
       </Container>
-    </Section>
+    </section>
   );
 }

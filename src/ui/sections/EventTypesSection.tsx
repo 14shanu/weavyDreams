@@ -10,18 +10,20 @@ export default async function EventTypesSection() {
   const featuredEvents = eventTypes.filter((e) => e.featured);
 
   return (
-    <Section background="alt" id="event-types">
+    <section className="py-20 bg-gray-50">
       <Container>
         <FadeIn>
-          <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-center mb-4">
-            Event Types We Specialize In
-          </h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-            From intimate celebrations to grand productions, we bring expertise to every event type
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Event Types We Specialize In
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From intimate celebrations to grand productions, we bring expertise to every event type
+            </p>
+          </div>
         </FadeIn>
 
-        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredEvents.map((event) => (
             <StaggerItem key={event.id}>
               <EventTypeCard event={event} />
@@ -29,6 +31,6 @@ export default async function EventTypesSection() {
           ))}
         </StaggerChildren>
       </Container>
-    </Section>
+    </section>
   );
 }

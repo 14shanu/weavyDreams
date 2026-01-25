@@ -4,6 +4,7 @@ import Card from '@/ui/elements/Card';
 import Button from '@/ui/elements/Button';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Portfolio | Weaving Dreams',
@@ -62,9 +63,11 @@ export default function PortfolioPage() {
               <p className="text-gray-600 mb-6">
                 Want to see your event featured here?
               </p>
-              <Button variant="primary" onClick={() => window.location.href = '/contact'}>
-                Start Planning
-              </Button>
+              <Link href="/contact">
+                <Button variant="primary">
+                  Start Planning
+                </Button>
+              </Link>
             </div>
           </FadeIn>
         </Container>

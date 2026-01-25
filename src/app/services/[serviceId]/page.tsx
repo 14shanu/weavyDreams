@@ -26,51 +26,57 @@ export default function ServicePage({ params }: PageProps) {
     });
   }, [params]);
 
-  if (!service) return null;
+  if (!service) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-primary)]"></div></div>;
 
   return (
     <>
       {/* Hero Section */}
-      <Section background="default" spacing="lg">
+      <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 py-20">
         <Container>
           <FadeIn>
-            <h1 className="text-3xl md:text-5xl font-[var(--font-heading)] text-white text-center mb-4">
-              {service.name}
-            </h1>
-            <p className="text-xl text-white/80 text-center max-w-3xl mx-auto">
-              {service.tagline}
-            </p>
+            <div className="text-center">
+              <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
+                {service.icon} Service
+              </span>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {service.name}
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+                {service.tagline}
+              </p>
+            </div>
           </FadeIn>
         </Container>
-      </Section>
+      </section>
 
       {/* Service Details */}
-      <Section background="alt">
+      <section className="py-20 bg-white">
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
-              <div className="relative h-96 rounded-xl overflow-hidden">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src={service.image}
                   alt={service.name}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             </FadeIn>
 
             <FadeIn direction="right">
-              <h2 className="text-2xl font-semibold mb-4">About This Service</h2>
-              <p className="text-gray-600 mb-6">{service.description}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About This Service</h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">{service.description}</p>
 
-              <h3 className="text-lg font-semibold mb-3">What's Included:</h3>
-              <ul className="space-y-2 mb-8">
-                {service.features.map((feature, index) => (
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included:</h3>
+              <ul className="space-y-4 mb-10">
+                {service.features.map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-lg text-gray-800">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -81,7 +87,7 @@ export default function ServicePage({ params }: PageProps) {
             </FadeIn>
           </div>
         </Container>
-      </Section>
+      </section>
 
       <QuoteRequestModal
         isOpen={isModalOpen}

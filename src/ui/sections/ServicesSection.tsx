@@ -9,18 +9,20 @@ export default async function ServicesSection() {
   const { services } = await getServices();
 
   return (
-    <Section background="default" id="services">
+    <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800">
       <Container>
         <FadeIn>
-          <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-center mb-4 text-white">
-            Our Services
-          </h2>
-          <p className="text-center text-white/80 max-w-2xl mx-auto mb-12">
-            Comprehensive event services to bring your vision to life
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our Services
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Comprehensive event services to bring your vision to life
+            </p>
+          </div>
         </FadeIn>
 
-        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <StaggerItem key={service.id}>
               <ServiceCard service={service} />
@@ -28,6 +30,6 @@ export default async function ServicesSection() {
           ))}
         </StaggerChildren>
       </Container>
-    </Section>
+    </section>
   );
 }

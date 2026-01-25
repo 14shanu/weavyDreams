@@ -13,7 +13,7 @@ export type HeroSectionConfig = {
 export type WorkItem = {
   label: string;
   image: string;
-  slug?: string;
+  slug: string;
 };
 
 export type WorkSectionConfig = {
@@ -37,7 +37,44 @@ export type ContactSectionConfig = {
   description?: string;
 };
 
-export type SectionConfig = HeroSectionConfig | WorkSectionConfig | WhatWeDoSectionConfig | ContactSectionConfig
+export type EventTypesSectionConfig = {
+  type: "eventTypes";
+  id: string;
+};
+
+export type ServicesSectionConfig = {
+  type: "services";
+  id: string;
+};
+
+export type AboutSectionConfig = {
+  type: "about";
+  id: string;
+  title: string;
+  body: string[];
+  image: string;
+};
+
+export type PortfolioSectionConfig = {
+  type: "portfolio";
+  id: string;
+  title: string;
+  items: WorkItem[];
+};
+
+export type CTASectionConfig = {
+  type: "cta";
+  id: string;
+  title: string;
+  description: string;
+};
+
+export type BlogSectionConfig = {
+  type: "blog";
+  id: string;
+};
+
+export type SectionConfig = HeroSectionConfig | WorkSectionConfig | WhatWeDoSectionConfig | ContactSectionConfig | EventTypesSectionConfig | ServicesSectionConfig | AboutSectionConfig | PortfolioSectionConfig | CTASectionConfig | BlogSectionConfig
 
 export interface PageConfig {
   slug: string;

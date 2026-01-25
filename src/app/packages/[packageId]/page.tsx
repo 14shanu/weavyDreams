@@ -28,69 +28,79 @@ export default function PackagePage({ params }: PageProps) {
     });
   }, [params]);
 
-  if (!pkg) return null;
+  if (!pkg) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div></div>;
 
   const tierColors: Record<string, string> = {
-    essential: 'from-blue-500 to-blue-600',
-    premium: 'from-purple-500 to-purple-600',
-    luxury: 'from-amber-500 to-amber-600',
+    essential: 'from-blue-500 via-blue-600 to-cyan-600',
+    premium: 'from-purple-500 via-purple-600 to-pink-600',
+    luxury: 'from-amber-500 via-orange-600 to-red-600',
+  };
+
+  const tierBadges: Record<string, string> = {
+    essential: 'bg-blue-100 text-blue-800',
+    premium: 'bg-purple-100 text-purple-800',
+    luxury: 'bg-amber-100 text-amber-800',
   };
 
   return (
     <>
       {/* Hero Section */}
-      <Section background="default" spacing="lg">
+      <section className={`bg-gradient-to-br ${tierColors[pkg.tier]} py-20`}>
         <Container>
           <FadeIn>
-            <div className={`bg-gradient-to-r ${tierColors[pkg.tier]} text-white rounded-2xl p-8 text-center`}>
-              <span className="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold uppercase mb-4">
-                {pkg.tier}
+            <div className="text-center">
+              <span className={`inline-block px-6 py-2 ${tierBadges[pkg.tier]} rounded-full text-sm font-bold uppercase mb-6`}>
+                {pkg.tier} Package
               </span>
-              <h1 className="text-3xl md:text-5xl font-[var(--font-heading)] mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 {pkg.name}
               </h1>
-              <p className="text-xl mb-2">{pkg.tagline}</p>
-              <p className="text-white/90">{pkg.guestCount}</p>
+              <p className="text-xl md:text-2xl text-white/90 mb-4">{pkg.tagline}</p>
+              <p className="text-lg text-white/80">{pkg.guestCount}</p>
             </div>
           </FadeIn>
         </Container>
-      </Section>
+      </section>
 
       {/* Package Details */}
-      <Section background="alt">
+      <section className="py-20 bg-gray-50">
         <Container>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
-            <div className="md:col-span-2">
+            <div className="lg:col-span-2">
               <FadeIn>
-                <h2 className="text-2xl font-semibold mb-4">Package Overview</h2>
-                <p className="text-gray-600 mb-8">{pkg.description}</p>
+                <Card className="mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Package Overview</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">{pkg.description}</p>
+                </Card>
 
-                <h3 className="text-xl font-semibold mb-4">What's Included</h3>
-                <div className="grid gap-3 mb-8">
-                  {pkg.features.map((feature, index) => (
-                    <div key={index} className="flex items-start">
-                      <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+                <Card className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+                  <div className="grid gap-4">
+                    {pkg.features.map((feature: string, index: number) => (
+                      <div key={index} className="flex items-start p-4 bg-green-50 rounded-lg border border-green-200">
+                        <svg className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-base font-medium text-gray-900">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
 
-                <h3 className="text-xl font-semibold mb-4">Included Services</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {includedServices.map((service) => (
-                    <Card key={service.id} padding="sm" className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-[var(--color-primary)]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl">{service.icon}</span>
+                <Card>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Included Services</h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {includedServices.map((service) => (
+                      <div key={service.id} className="flex items-center gap-4 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                        <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                          <span className="text-3xl">{service.icon}</span>
+                        </div>
+                        <p className="font-semibold text-gray-900">{service.name}</p>
                       </div>
-                      <div>
-                        <p className="font-medium text-sm">{service.name}</p>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </Card>
               </FadeIn>
             </div>
 
@@ -98,8 +108,8 @@ export default function PackagePage({ params }: PageProps) {
             <div>
               <FadeIn delay={0.2}>
                 <Card className="sticky top-24">
-                  <h3 className="text-lg font-semibold mb-4">Ready to Book?</h3>
-                  <p className="text-sm text-gray-600 mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Ready to Book?</h3>
+                  <p className="text-base text-gray-600 mb-6">
                     Get started with this package or customize it to your needs
                   </p>
                   <div className="space-y-3">
@@ -115,7 +125,7 @@ export default function PackagePage({ params }: PageProps) {
             </div>
           </div>
         </Container>
-      </Section>
+      </section>
 
       <QuoteRequestModal
         isOpen={isModalOpen}

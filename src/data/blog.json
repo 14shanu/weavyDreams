@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "id": "wedding-tips",
+      "name": "Wedding Tips",
+      "slug": "wedding-tips",
+      "description": "Expert advice for planning your perfect wedding"
+    },
+    {
+      "id": "event-planning",
+      "name": "Event Planning",
+      "slug": "event-planning",
+      "description": "Professional tips for successful events"
+    },
+    {
+      "id": "trends",
+      "name": "Trends",
+      "slug": "trends",
+      "description": "Latest trends in event management"
+    }
+  ],
+  "posts": [
+    {
+      "id": "wedding-planning-checklist",
+      "slug": "wedding-planning-checklist",
+      "title": "Complete Wedding Planning Checklist: 12 Months to Your Perfect Day",
+      "excerpt": "A comprehensive month-by-month guide to planning your dream wedding without stress.",
+      "content": "Planning a wedding can be overwhelming, but with the right checklist, you can stay organized...",
+      "author": "Weaving Dreams Team",
+      "publishedAt": "2025-01-15",
+      "image": "/images/blog/wedding-checklist.jpg",
+      "category": "wedding-tips",
+      "tags": ["wedding planning", "checklist", "wedding tips"],
+      "featured": true,
+      "relatedLinks": [
+        { "label": "Explore Wedding Packages", "href": "/events/weddings" },
+        { "label": "Photography Services", "href": "/services/photography" },
+        { "label": "Take Our Quiz", "href": "/quiz" }
+      ],
+      "seo": {
+        "title": "Wedding Planning Checklist 2025 | Complete Guide",
+        "description": "Free wedding planning checklist with month-by-month timeline. Expert tips from professional event planners.",
+        "keywords": ["wedding planning checklist", "wedding timeline", "how to plan a wedding", "wedding planning guide"]
+      }
+    },
+    {
+      "id": "corporate-event-trends-2025",
+      "slug": "corporate-event-trends-2025",
+      "title": "Top 10 Corporate Event Trends for 2025",
+      "excerpt": "Discover the latest trends shaping corporate events this year.",
+      "content": "Corporate events are evolving rapidly. Here are the top trends...",
+      "author": "Weaving Dreams Team",
+      "publishedAt": "2025-01-10",
+      "image": "/images/blog/corporate-trends.jpg",
+      "category": "trends",
+      "tags": ["corporate events", "trends", "event planning"],
+      "featured": true,
+      "relatedLinks": [
+        { "label": "Corporate Event Packages", "href": "/events/corporate-events" },
+        { "label": "Event Coordination", "href": "/services/event-coordination" },
+        { "label": "Contact Us", "href": "/contact" }
+      ],
+      "seo": {
+        "title": "Corporate Event Trends 2025 | Latest Event Planning Ideas",
+        "description": "Discover the top corporate event trends for 2025. Expert insights from professional event planners.",
+        "keywords": ["corporate event trends", "event planning 2025", "corporate event ideas", "business events"]
+      }
+    },
+    {
+      "id": "choosing-wedding-photographer",
+      "slug": "choosing-wedding-photographer",
+      "title": "How to Choose the Perfect Wedding Photographer",
+      "excerpt": "Essential tips for selecting a photographer who will capture your special day perfectly.",
+      "content": "Your wedding photos will last a lifetime. Here's how to choose the right photographer...",
+      "author": "Weaving Dreams Team",
+      "publishedAt": "2025-01-05",
+      "image": "/images/blog/wedding-photographer.jpg",
+      "category": "wedding-tips",
+      "tags": ["wedding photography", "photographer tips", "wedding planning"],
+      "featured": false,
+      "relatedLinks": [
+        { "label": "Photography Services", "href": "/services/photography" },
+        { "label": "Wedding Packages", "href": "/events/weddings" },
+        { "label": "View Portfolio", "href": "/portfolio" }
+      ],
+      "seo": {
+        "title": "How to Choose a Wedding Photographer | Expert Guide",
+        "description": "Learn how to select the perfect wedding photographer. Tips from professional event planners.",
+        "keywords": ["wedding photographer", "how to choose photographer", "wedding photography tips"]
+      }
+    },
+    {
+      "id": "event-planning-basics",
+      "slug": "event-planning-basics",
+      "title": "Event Planning 101: Essential Tips for Success",
+      "excerpt": "Master the fundamentals of event planning with our comprehensive guide.",
+      "content": "Planning a successful event requires careful attention to detail and strategic thinking...",
+      "author": "Weaving Dreams Team",
+      "publishedAt": "2025-01-01",
+      "image": "/images/blog/event-planning.jpg",
+      "category": "event-planning",
+      "tags": ["event planning", "event tips", "planning guide"],
+      "featured": false,
+      "relatedLinks": [
+        { "label": "Event Coordination", "href": "/services/event-coordination" },
+        { "label": "All Services", "href": "/services" },
+        { "label": "Contact Us", "href": "/contact" }
+      ],
+      "seo": {
+        "title": "Event Planning 101 | Essential Tips for Success",
+        "description": "Learn the fundamentals of event planning. Expert tips from professional event planners.",
+        "keywords": ["event planning", "how to plan events", "event planning tips"]
+      }
+    }
+  ]
+}
