@@ -1,0 +1,73 @@
+{
+  "site": {
+    "name": "Weaving Dreams",
+    "tagline": "Professional Event Planning Services",
+    "description": "Professional event planning and management services. From concept to execution, we bring your vision to life.",
+    "region": "IN"
+  },
+  "localization": {
+    "default": {
+      "country": "IN",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "locale": "en-IN",
+      "timezone": "Asia/Kolkata",
+      "dateFormat": "DD/MM/YYYY",
+      "phoneFormat": "+91"
+    },
+    "autoDetect": true
+  },
+  "pricing": {
+    "displayMode": "hidden",
+    "baseCurrency": "INR",
+    "autoDetect": true,
+    "fallbackCurrency": "INR",
+    "currencies": {
+      "INR": {
+        "symbol": "₹",
+        "rate": 1,
+        "locale": "en-IN",
+        "countries": ["IN", "NP", "BT", "LK", "BD", "PK"]
+      },
+      "USD": {
+        "symbol": "$",
+        "rate": 0.012,
+        "locale": "en-US",
+        "countries": ["US", "CA", "MX", "PR", "VI"]
+      },
+      "AUD": {
+        "symbol": "A$",
+        "rate": 0.019,
+        "locale": "en-AU",
+        "countries": ["AU", "NZ"]
+      },
+      "EUR": {
+        "symbol": "€",
+        "rate": 0.011,
+        "locale": "en-EU",
+        "countries": ["DE", "FR", "IT", "ES", "NL", "BE", "AT", "PT", "IE", "GR", "FI", "SE", "DK", "NO"]
+      },
+      "GBP": {
+        "symbol": "£",
+        "rate": 0.0095,
+        "locale": "en-GB",
+        "countries": ["GB", "UK"]
+      }
+    }
+  },
+  "features": {
+    "quiz": true,
+    "cart": true,
+    "portfolio": true
+  },
+  "contact": {
+    "email": "info@weavingdreams.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Event Street, City, State 12345"
+  },
+  "social": {
+    "facebook": "https://facebook.com/weavingdreams",
+    "instagram": "https://instagram.com/weavingdreams",
+    "linkedin": "https://linkedin.com/company/weavingdreams"
+  }
+}

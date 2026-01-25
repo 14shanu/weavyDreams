@@ -1,0 +1,220 @@
+{
+  "quiz": {
+    "title": "Find Your Perfect Event Package",
+    "description": "Answer 5 quick questions to get personalized package recommendations",
+    "questions": [
+      {
+        "id": "event-type",
+        "question": "What type of event are you planning?",
+        "type": "single-choice",
+        "required": true,
+        "options": [
+          {
+            "id": "weddings",
+            "label": "Wedding",
+            "icon": "rings",
+            "weight": 1
+          },
+          {
+            "id": "corporate",
+            "label": "Corporate Event",
+            "icon": "briefcase",
+            "weight": 1
+          },
+          {
+            "id": "private",
+            "label": "Private Celebration",
+            "icon": "party",
+            "weight": 1
+          },
+          {
+            "id": "exhibitions",
+            "label": "Exhibition / Expo",
+            "icon": "presentation",
+            "weight": 1
+          },
+          {
+            "id": "proposals",
+            "label": "Proposal",
+            "icon": "heart",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "guest-count",
+        "question": "How many guests are you expecting?",
+        "type": "single-choice",
+        "required": true,
+        "options": [
+          {
+            "id": "small",
+            "label": "Under 50",
+            "range": [0, 50],
+            "tier": "essential",
+            "weight": 1
+          },
+          {
+            "id": "medium",
+            "label": "50-150",
+            "range": [50, 150],
+            "tier": "premium",
+            "weight": 1
+          },
+          {
+            "id": "large",
+            "label": "150-300",
+            "range": [150, 300],
+            "tier": "luxury",
+            "weight": 1
+          },
+          {
+            "id": "xlarge",
+            "label": "300+",
+            "range": [300, 1000],
+            "tier": "luxury",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "question": "What's your approximate budget?",
+        "type": "single-choice",
+        "required": true,
+        "options": [
+          {
+            "id": "budget-low",
+            "label": "Under ₹1 Lakh",
+            "range": [0, 100000],
+            "tier": "essential",
+            "weight": 2
+          },
+          {
+            "id": "budget-medium",
+            "label": "₹1-3 Lakhs",
+            "range": [100000, 300000],
+            "tier": "premium",
+            "weight": 2
+          },
+          {
+            "id": "budget-high",
+            "label": "₹3-6 Lakhs",
+            "range": [300000, 600000],
+            "tier": "luxury",
+            "weight": 2
+          },
+          {
+            "id": "budget-premium",
+            "label": "₹6 Lakhs+",
+            "range": [600000, 10000000],
+            "tier": "luxury",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "priority-services",
+        "question": "Which services are most important to you?",
+        "type": "multiple-choice",
+        "required": true,
+        "maxSelections": 3,
+        "options": [
+          {
+            "id": "photography",
+            "label": "Photography",
+            "icon": "camera",
+            "serviceId": "photography",
+            "weight": 1
+          },
+          {
+            "id": "videography",
+            "label": "Videography",
+            "icon": "video",
+            "serviceId": "videography",
+            "weight": 1
+          },
+          {
+            "id": "catering",
+            "label": "Catering",
+            "icon": "utensils",
+            "serviceId": "catering",
+            "weight": 1
+          },
+          {
+            "id": "venue-decoration",
+            "label": "Venue Decoration",
+            "icon": "sparkles",
+            "serviceId": "venue-decoration",
+            "weight": 1
+          },
+          {
+            "id": "entertainment",
+            "label": "Entertainment",
+            "icon": "music",
+            "serviceId": "entertainment",
+            "weight": 1
+          },
+          {
+            "id": "event-coordination",
+            "label": "Event Coordination",
+            "icon": "clipboard",
+            "serviceId": "event-coordination",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "style-preference",
+        "question": "What style best describes your event?",
+        "type": "single-choice",
+        "required": true,
+        "options": [
+          {
+            "id": "simple",
+            "label": "Simple & Elegant",
+            "description": "Clean, minimal, and sophisticated",
+            "tier": "essential",
+            "weight": 1
+          },
+          {
+            "id": "modern",
+            "label": "Modern & Stylish",
+            "description": "Contemporary with premium touches",
+            "tier": "premium",
+            "weight": 1
+          },
+          {
+            "id": "luxury",
+            "label": "Luxury & Grand",
+            "description": "Opulent, extravagant, and memorable",
+            "tier": "luxury",
+            "weight": 1
+          },
+          {
+            "id": "traditional",
+            "label": "Traditional & Classic",
+            "description": "Timeless and culturally rich",
+            "tier": "premium",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "scoring": {
+      "algorithm": "weighted",
+      "tierWeights": {
+        "essential": 1,
+        "premium": 2,
+        "luxury": 3
+      },
+      "recommendationCount": 3
+    },
+    "results": {
+      "title": "Your Personalized Recommendations",
+      "description": "Based on your answers, here are the perfect packages for your event",
+      "ctaText": "View Package Details",
+      "alternativeText": "Not quite right? Browse all packages or build your own."
+    }
+  }
+}

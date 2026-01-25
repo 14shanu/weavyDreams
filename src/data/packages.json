@@ -1,0 +1,306 @@
+{
+  "packages": [
+    {
+      "id": "wedding-essential",
+      "name": "Wedding Essential",
+      "slug": "wedding-essential",
+      "eventType": "weddings",
+      "tier": "essential",
+      "tagline": "Perfect for intimate celebrations",
+      "description": "Everything you need for a beautiful wedding celebration with essential services.",
+      "price": 150000,
+      "guestCount": "Up to 100 guests",
+      "image": "/images/packages/wedding-essential.jpg",
+      "services": ["photography", "venue-decoration", "event-coordination"],
+      "features": [
+        "6 hours photography coverage",
+        "Basic venue decoration",
+        "Day-of coordination",
+        "Digital photo delivery"
+      ]
+    },
+    {
+      "id": "wedding-premium",
+      "name": "Wedding Premium",
+      "slug": "wedding-premium",
+      "eventType": "weddings",
+      "tier": "premium",
+      "tagline": "Elevated wedding experience",
+      "description": "Enhanced services for a memorable wedding with premium touches.",
+      "price": 300000,
+      "guestCount": "Up to 200 guests",
+      "image": "/images/packages/wedding-premium.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "event-coordination"],
+      "features": [
+        "8 hours photography + videography",
+        "Premium catering for 200 guests",
+        "Designer venue decoration",
+        "Full event coordination",
+        "Highlight video included"
+      ]
+    },
+    {
+      "id": "wedding-luxury",
+      "name": "Wedding Luxury",
+      "slug": "wedding-luxury",
+      "eventType": "weddings",
+      "tier": "luxury",
+      "tagline": "The ultimate wedding experience",
+      "description": "Complete luxury wedding package with all premium services included.",
+      "price": 600000,
+      "guestCount": "Up to 300 guests",
+      "image": "/images/packages/wedding-luxury.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "Full day photography + videography",
+        "Premium catering for 300 guests",
+        "Luxury venue decoration with lighting",
+        "Live entertainment and DJ",
+        "Complete event management",
+        "Cinematic wedding film",
+        "Drone footage included"
+      ]
+    },
+    {
+      "id": "corporate-essential",
+      "name": "Corporate Essential",
+      "slug": "corporate-essential",
+      "eventType": "corporate",
+      "tier": "essential",
+      "tagline": "Professional corporate events",
+      "description": "Essential services for professional corporate gatherings and meetings.",
+      "price": 80000,
+      "guestCount": "Up to 50 attendees",
+      "image": "/images/packages/corporate-essential.jpg",
+      "services": ["photography", "catering", "event-coordination"],
+      "features": [
+        "4 hours event photography",
+        "Business catering for 50",
+        "Event coordination",
+        "Basic AV setup"
+      ]
+    },
+    {
+      "id": "corporate-premium",
+      "name": "Corporate Premium",
+      "slug": "corporate-premium",
+      "eventType": "corporate",
+      "tier": "premium",
+      "tagline": "Elevated corporate experiences",
+      "description": "Enhanced corporate event services with professional production.",
+      "price": 200000,
+      "guestCount": "Up to 150 attendees",
+      "image": "/images/packages/corporate-premium.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "event-coordination"],
+      "features": [
+        "Full day photography + videography",
+        "Premium catering for 150",
+        "Professional stage setup",
+        "Complete event management",
+        "Event highlight video"
+      ]
+    },
+    {
+      "id": "corporate-luxury",
+      "name": "Corporate Luxury",
+      "slug": "corporate-luxury",
+      "eventType": "corporate",
+      "tier": "luxury",
+      "tagline": "Premium corporate productions",
+      "description": "Complete luxury corporate event with full production services.",
+      "price": 500000,
+      "guestCount": "Up to 300 attendees",
+      "image": "/images/packages/corporate-luxury.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "Multi-camera video production",
+        "Luxury catering for 300",
+        "Premium stage and lighting design",
+        "Live entertainment",
+        "Full event production",
+        "Live streaming available",
+        "Professional editing and delivery"
+      ]
+    },
+    {
+      "id": "private-essential",
+      "name": "Private Celebration Essential",
+      "slug": "private-essential",
+      "eventType": "private",
+      "tier": "essential",
+      "tagline": "Intimate private celebrations",
+      "description": "Perfect for birthdays, anniversaries, and small gatherings.",
+      "price": 50000,
+      "guestCount": "Up to 50 guests",
+      "image": "/images/packages/private-essential.jpg",
+      "services": ["photography", "venue-decoration", "event-coordination"],
+      "features": [
+        "4 hours photography",
+        "Basic decoration",
+        "Event coordination",
+        "Digital photo album"
+      ]
+    },
+    {
+      "id": "private-premium",
+      "name": "Private Celebration Premium",
+      "slug": "private-premium",
+      "eventType": "private",
+      "tier": "premium",
+      "tagline": "Memorable private events",
+      "description": "Enhanced services for special private celebrations.",
+      "price": 120000,
+      "guestCount": "Up to 100 guests",
+      "image": "/images/packages/private-premium.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "6 hours photography + videography",
+        "Premium catering for 100",
+        "Designer decoration",
+        "DJ and entertainment",
+        "Full coordination"
+      ]
+    },
+    {
+      "id": "private-luxury",
+      "name": "Private Celebration Luxury",
+      "slug": "private-luxury",
+      "eventType": "private",
+      "tier": "luxury",
+      "tagline": "Extraordinary celebrations",
+      "description": "Ultimate luxury package for unforgettable private events.",
+      "price": 250000,
+      "guestCount": "Up to 150 guests",
+      "image": "/images/packages/private-luxury.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "Full day photography + videography",
+        "Luxury catering for 150",
+        "Premium decoration with lighting",
+        "Live entertainment and DJ",
+        "Complete event management",
+        "Cinematic highlight film"
+      ]
+    },
+    {
+      "id": "exhibition-essential",
+      "name": "Exhibition Essential",
+      "slug": "exhibition-essential",
+      "eventType": "exhibitions",
+      "tier": "essential",
+      "tagline": "Professional exhibition coverage",
+      "description": "Essential services for exhibitions and trade shows.",
+      "price": 60000,
+      "guestCount": "1-2 day event",
+      "image": "/images/packages/exhibition-essential.jpg",
+      "services": ["photography", "event-coordination"],
+      "features": [
+        "Full day photography",
+        "Booth setup coordination",
+        "Digital photo delivery",
+        "Basic event support"
+      ]
+    },
+    {
+      "id": "exhibition-premium",
+      "name": "Exhibition Premium",
+      "slug": "exhibition-premium",
+      "eventType": "exhibitions",
+      "tier": "premium",
+      "tagline": "Enhanced exhibition services",
+      "description": "Comprehensive coverage for professional exhibitions.",
+      "price": 150000,
+      "guestCount": "2-3 day event",
+      "image": "/images/packages/exhibition-premium.jpg",
+      "services": ["photography", "videography", "venue-decoration", "event-coordination"],
+      "features": [
+        "Multi-day photography + videography",
+        "Professional booth design",
+        "Event coordination",
+        "Promotional video included"
+      ]
+    },
+    {
+      "id": "exhibition-luxury",
+      "name": "Exhibition Luxury",
+      "slug": "exhibition-luxury",
+      "eventType": "exhibitions",
+      "tier": "luxury",
+      "tagline": "Premium exhibition production",
+      "description": "Complete luxury exhibition package with full production.",
+      "price": 350000,
+      "guestCount": "3-5 day event",
+      "image": "/images/packages/exhibition-luxury.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "Full event video production",
+        "Premium booth design and setup",
+        "Catering for exhibitors",
+        "Live entertainment",
+        "Complete event management",
+        "Professional editing and delivery"
+      ]
+    },
+    {
+      "id": "proposal-essential",
+      "name": "Proposal Essential",
+      "slug": "proposal-essential",
+      "eventType": "proposals",
+      "tier": "essential",
+      "tagline": "Capture your special moment",
+      "description": "Perfect for intimate proposal moments.",
+      "price": 25000,
+      "guestCount": "2-10 people",
+      "image": "/images/packages/proposal-essential.jpg",
+      "services": ["photography", "venue-decoration"],
+      "features": [
+        "2 hours photography",
+        "Simple romantic decoration",
+        "Digital photo delivery",
+        "Location scouting"
+      ]
+    },
+    {
+      "id": "proposal-premium",
+      "name": "Proposal Premium",
+      "slug": "proposal-premium",
+      "eventType": "proposals",
+      "tier": "premium",
+      "tagline": "Unforgettable proposal experience",
+      "description": "Enhanced proposal package with video and premium setup.",
+      "price": 60000,
+      "guestCount": "2-20 people",
+      "image": "/images/packages/proposal-premium.jpg",
+      "services": ["photography", "videography", "venue-decoration", "event-coordination"],
+      "features": [
+        "3 hours photography + videography",
+        "Premium romantic decoration",
+        "Event coordination",
+        "Highlight video included",
+        "Surprise element planning"
+      ]
+    },
+    {
+      "id": "proposal-luxury",
+      "name": "Proposal Luxury",
+      "slug": "proposal-luxury",
+      "eventType": "proposals",
+      "tier": "luxury",
+      "tagline": "The ultimate proposal experience",
+      "description": "Extraordinary luxury proposal with complete production.",
+      "price": 150000,
+      "guestCount": "2-50 people",
+      "image": "/images/packages/proposal-luxury.jpg",
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "features": [
+        "Full day photography + videography",
+        "Luxury venue decoration with lighting",
+        "Premium catering",
+        "Live music or entertainment",
+        "Complete event planning",
+        "Cinematic proposal film",
+        "Drone footage included"
+      ]
+    }
+  ]
+}

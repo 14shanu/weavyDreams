@@ -1,0 +1,118 @@
+{
+  "services": [
+    {
+      "id": "photography",
+      "name": "Photography",
+      "slug": "photography",
+      "tagline": "Capture every precious moment",
+      "description": "Professional photography services to document your special event with stunning clarity and artistic vision.",
+      "icon": "camera",
+      "image": "/images/services/photography.jpg",
+      "features": [
+        "Professional photographers",
+        "High-resolution images",
+        "Edited photo delivery",
+        "Online gallery access"
+      ],
+      "pricing": {
+        "basePrice": 1500,
+        "unit": "event"
+      }
+    },
+    {
+      "id": "videography",
+      "name": "Videography",
+      "slug": "videography",
+      "tagline": "Relive your special moments",
+      "description": "Cinematic videography that tells your event's story with professional editing and stunning visuals.",
+      "icon": "video",
+      "image": "/images/services/videography.jpg",
+      "features": [
+        "4K video recording",
+        "Professional editing",
+        "Highlight reel included",
+        "Drone footage available"
+      ],
+      "pricing": {
+        "basePrice": 2000,
+        "unit": "event"
+      }
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "slug": "catering",
+      "tagline": "Delicious cuisine for every palate",
+      "description": "Exceptional catering services with customizable menus to delight your guests.",
+      "icon": "utensils",
+      "image": "/images/services/catering.jpg",
+      "features": [
+        "Custom menu planning",
+        "Dietary accommodations",
+        "Professional service staff",
+        "Setup and cleanup included"
+      ],
+      "pricing": {
+        "basePrice": 50,
+        "unit": "per person"
+      }
+    },
+    {
+      "id": "venue-decoration",
+      "name": "Venue Decoration",
+      "slug": "venue-decoration",
+      "tagline": "Transform your space",
+      "description": "Creative decoration services that bring your vision to life with stunning visual impact.",
+      "icon": "sparkles",
+      "image": "/images/services/venue-decoration.jpg",
+      "features": [
+        "Custom design concepts",
+        "Premium decor materials",
+        "Setup and breakdown",
+        "Lighting design"
+      ],
+      "pricing": {
+        "basePrice": 2500,
+        "unit": "event"
+      }
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "tagline": "Keep your guests engaged",
+      "description": "Professional entertainment options to create memorable experiences for your guests.",
+      "icon": "music",
+      "image": "/images/services/entertainment.jpg",
+      "features": [
+        "DJ and MC services",
+        "Live music options",
+        "Sound system included",
+        "Custom playlist creation"
+      ],
+      "pricing": {
+        "basePrice": 1200,
+        "unit": "event"
+      }
+    },
+    {
+      "id": "event-coordination",
+      "name": "Event Coordination",
+      "slug": "event-coordination",
+      "tagline": "Stress-free event management",
+      "description": "Professional coordination to ensure every detail is perfect and your event runs smoothly.",
+      "icon": "clipboard",
+      "image": "/images/services/event-coordination.jpg",
+      "features": [
+        "Full event planning",
+        "Vendor coordination",
+        "Timeline management",
+        "Day-of coordination"
+      ],
+      "pricing": {
+        "basePrice": 1800,
+        "unit": "event"
+      }
+    }
+  ]
+}

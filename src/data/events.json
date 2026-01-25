@@ -1,71 +1,84 @@
 {
   "eventTypes": [
     {
-      "id": "corporate",
-      "name": "Corporate",
-      "slug": "corporate-events",
-      "description": "Professional event solutions for conferences, galas and brand activations.",
-      "heroImage": "/images/events/corporate-hero.jpg",
+      "id": "weddings",
+      "name": "Weddings",
+      "slug": "weddings",
+      "tagline": "From dream to I do",
+      "description": "Creating magical wedding experiences that celebrate your unique love story with elegance and perfection.",
+      "image": "/images/events/weddings.jpg",
+      "icon": "heart",
+      "featured": true,
+      "packages": ["wedding-essential", "wedding-premium", "wedding-luxury"],
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
       "seo": {
-        "title": "Corporate Event Products | Showman",
-        "description": "Explore entertainment, lighting, staging and more for your corporate events."
-      },
-      "helpfulLinks": [
-        {
-          "label": "Corporate Event Management",
-          "href": "/services/corporate-management"
-        },
-        {
-          "label": "Corporate Event Styling",
-          "href": "/services/corporate-styling"
-        },
-        {
-          "label": "Build Your Own Package",
-          "href": "/packages/build-your-own"
-        }
-      ],
-      "categories": [
-        {
-          "id": "entertainment",
-          "name": "Entertainment",
-          "slug": "entertainment",
-          "description": "Live performers, DJs and interactive experiences.",
-          "products": [
-            {
-              "id": "corporate-djs",
-              "name": "Corporate DJs",
-              "slug": "corporate-djs",
-              "shortDescription": "Professional DJs tailored for corporate audiences.",
-              "image": "/images/products/corporate-djs.jpg",
-              "seo": {
-                "title": "Corporate DJs for Events | Showman",
-                "description": "Book experienced DJs for your next corporate event, conference or gala dinner."
-              }
-            },
-            {
-              "id": "corporate-mcs",
-              "name": "Corporate MCs",
-              "slug": "corporate-mcs",
-              "shortDescription": "Engaging MCs to host and guide your corporate event."
-            }
-          ]
-        },
-        {
-          "id": "lighting",
-          "name": "Lighting",
-          "slug": "lighting",
-          "description": "Atmospheric and feature lighting for any venue.",
-          "products": [
-            {
-              "id": "led-light-tunnel",
-              "name": "LED Light Tunnel",
-              "slug": "led-light-tunnel",
-              "shortDescription": "Create a dramatic entrance with a full LED light tunnel.",
-              "image": "/images/products/led-light-tunnel.jpg"
-            }
-          ]
-        }
-      ]
+        "title": "Wedding Planning Services | Weaving Dreams",
+        "description": "Professional wedding planning and management services. From intimate ceremonies to grand celebrations, we bring your dream wedding to life."
+      }
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate Events",
+      "slug": "corporate-events",
+      "tagline": "Professional events that inspire",
+      "description": "Delivering impactful corporate events that engage audiences and elevate your brand presence.",
+      "image": "/images/events/corporate.jpg",
+      "icon": "briefcase",
+      "featured": true,
+      "packages": ["corporate-essential", "corporate-premium", "corporate-luxury"],
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "seo": {
+        "title": "Corporate Event Planning | Weaving Dreams",
+        "description": "Expert corporate event planning for conferences, galas, product launches, and team building events. Professional execution guaranteed."
+      }
+    },
+    {
+      "id": "private",
+      "name": "Private Celebrations",
+      "slug": "private-celebrations",
+      "tagline": "Celebrate life's special moments",
+      "description": "Crafting memorable private celebrations for birthdays, anniversaries, and milestone moments.",
+      "image": "/images/events/private.jpg",
+      "icon": "gift",
+      "featured": true,
+      "packages": ["private-essential", "private-premium", "private-luxury"],
+      "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "seo": {
+        "title": "Private Event Planning | Weaving Dreams",
+        "description": "Personalized planning for birthdays, anniversaries, and special celebrations. Make your private event unforgettable."
+      }
+    },
+    {
+      "id": "exhibitions",
+      "name": "Exhibitions & Expos",
+      "slug": "exhibitions-expos",
+      "tagline": "Showcase your brand",
+      "description": "Professional exhibition and expo services that maximize your brand visibility and engagement.",
+      "image": "/images/events/exhibitions.jpg",
+      "icon": "presentation",
+      "featured": true,
+      "packages": ["exhibition-essential", "exhibition-premium", "exhibition-luxury"],
+      "services": ["photography", "videography", "venue-decoration", "event-coordination"],
+      "seo": {
+        "title": "Exhibition & Expo Planning | Weaving Dreams",
+        "description": "Complete exhibition and trade show planning services. From booth design to event coordination, we ensure your success."
+      }
+    },
+    {
+      "id": "proposals",
+      "name": "Proposals",
+      "slug": "proposals",
+      "tagline": "The perfect moment",
+      "description": "Creating unforgettable proposal experiences that capture the magic of your special moment.",
+      "image": "/images/events/proposals.jpg",
+      "icon": "sparkles",
+      "featured": false,
+      "packages": ["proposal-essential", "proposal-premium", "proposal-luxury"],
+      "services": ["photography", "videography", "venue-decoration", "event-coordination"],
+      "seo": {
+        "title": "Proposal Planning Services | Weaving Dreams",
+        "description": "Plan the perfect proposal with our expert coordination. From intimate moments to grand gestures, we make it unforgettable."
+      }
     }
   ]
 }

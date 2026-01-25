@@ -1,33 +1,56 @@
 {
   "brand": {
-    "label": "SHOWMAN",
-    "href": "#hero"
+    "label": "WEAVING DREAMS",
+    "tagline": "Professional Event Planning Services",
+    "href": "/"
   },
   "links": [
-    { "label": "Home", "href": "#hero" },
-    { "label": "Our Work", "href": "#our-work" },
-    { "label": "What We Do", "href": "#what-we-do" },
-    { "label": "Contact", "href": "#contact" }
+    { "label": "Home", "href": "/" },
+    { "label": "Events", "href": "/events" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Packages", "href": "/packages" },
+    { "label": "Quiz", "href": "/quiz" },
+    { "label": "Portfolio", "href": "/portfolio" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
   ],
   "footer": {
-    "copyrightLabel": "Showman. All rights reserved.",
-    "rightText": "Built on a configurable Next.js template.",
+    "copyrightLabel": "Weaving Dreams. All rights reserved.",
+    "rightText": "Creating unforgettable events since 2024.",
     "columns": [
       {
-        "title": "Pages",
+        "title": "Event Types",
         "links": [
-          { "label": "Home", "href": "#hero" },
-          { "label": "Our Work", "href": "#our-work" },
-          { "label": "What We Do", "href": "#what-we-do" },
-          { "label": "Contact", "href": "#contact" }
+          { "label": "Weddings", "href": "/events/weddings" },
+          { "label": "Corporate Events", "href": "/events/corporate-events" },
+          { "label": "Private Celebrations", "href": "/events/private-celebrations" },
+          { "label": "Exhibitions & Expos", "href": "/events/exhibitions-expos" }
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          { "label": "Photography", "href": "/services/photography" },
+          { "label": "Videography", "href": "/services/videography" },
+          { "label": "Catering", "href": "/services/catering" },
+          { "label": "Venue Decoration", "href": "/services/venue-decoration" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "/about" },
+          { "label": "Portfolio", "href": "/portfolio" },
+          { "label": "Contact", "href": "/contact" },
+          { "label": "Take Quiz", "href": "/quiz" }
         ]
       },
       {
         "title": "Social",
         "links": [
-          { "label": "Facebook", "href": "https://facebook.com" },
-          { "label": "Instagram", "href": "https://instagram.com" },
-          { "label": "LinkedIn", "href": "https://linkedin.com" }
+          { "label": "Facebook", "href": "https://facebook.com/weavingdreams" },
+          { "label": "Instagram", "href": "https://instagram.com/weavingdreams" },
+          { "label": "LinkedIn", "href": "https://linkedin.com/company/weavingdreams" }
         ]
       }
     ]
