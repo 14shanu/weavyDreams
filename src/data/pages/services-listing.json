@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive event services to bring your vision to life"
+  },
+  "seo": {
+    "title": "Our Services | Weaving Dreams",
+    "description": "Explore our comprehensive event services including photography, videography, catering, venue decoration, entertainment, and event coordination.",
+    "keywords": ["event services", "wedding services", "event planning services", "photography services", "catering services", "event coordination"],
+    "openGraph": {
+      "title": "Event Services - Weaving Dreams",
+      "description": "Comprehensive event services for weddings, corporate events, and celebrations",
+      "image": "/images/og-services.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Our Event Services",
+      "description": "Photography, videography, catering, and more",
+      "image": "/images/og-services.jpg"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "About Weaving Dreams",
+    "subtitle": "Creating unforgettable events from concept to execution"
+  },
+  "story": {
+    "title": "Our Story",
+    "paragraphs": [
+      "Weaving Dreams was founded with a simple mission: to transform ordinary events into extraordinary experiences. With years of expertise in event planning and management, we bring creativity, precision, and passion to every project.",
+      "From intimate celebrations to grand productions, we approach each event with strategic clarity and creative vision. Our team is dedicated to understanding your unique needs and bringing your vision to life.",
+      "We believe that every event tells a story, and we're here to help you tell yours in the most memorable way possible."
+    ]
+  },
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "We strive for perfection in every detail of your event",
+      "icon": "⭐",
+      "color": "from-yellow-400 to-orange-500"
+    },
+    {
+      "title": "Creativity",
+      "description": "Innovative solutions that bring your unique vision to life",
+      "icon": "🎨",
+      "color": "from-purple-400 to-pink-500"
+    },
+    {
+      "title": "Reliability",
+      "description": "Dependable service you can trust for your special day",
+      "icon": "🤝",
+      "color": "from-blue-400 to-cyan-500"
+    },
+    {
+      "title": "Passion",
+      "description": "We love what we do and it shows in every event",
+      "icon": "❤️",
+      "color": "from-red-400 to-pink-500"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Start Planning?",
+    "subtitle": "Let's create something amazing together. Get in touch to discuss your event."
+  },
+  "seo": {
+    "title": "About Us | Weaving Dreams",
+    "description": "Learn about our passion for creating unforgettable events and our commitment to excellence in event planning and management.",
+    "keywords": ["about weaving dreams", "event planning company", "our story", "event management team", "professional event planners"],
+    "openGraph": {
+      "title": "About Weaving Dreams",
+      "description": "Creating unforgettable events from concept to execution",
+      "image": "/images/og-about.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "About Weaving Dreams",
+      "description": "Creating unforgettable events from concept to execution",
+      "image": "/images/og-about.jpg"
+    }
+  }
+}

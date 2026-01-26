@@ -1,15 +1,26 @@
+import { Metadata } from 'next';
 import Section from '@/ui/layout/Section';
 import Container from '@/ui/layout/Container';
 import Card from '@/ui/elements/Card';
 import ContactForm from '@/ui/forms/ContactForm';
 import FadeIn from '@/ui/animations/FadeIn';
+import contactData from '@/data/pages/contact.json';
+import siteConfig from '@/data/site-config.json';
 
-export const metadata = {
-  title: 'Contact Us | Weaving Dreams',
-  description: 'Get in touch with us to discuss your event planning needs',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = contactData;
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    openGraph: seo.openGraph,
+    twitter: seo.twitter,
+  };
+}
 
 export default function ContactPage() {
+  const { hero, content } = contactData;
+  const { contact } = siteConfig;
   return (
     <>
       <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 py-20">
@@ -17,10 +28,10 @@ export default function ContactPage() {
           <FadeIn>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Contact Us
+                {hero.title}
               </h1>
               <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-                Let's discuss your event and bring your vision to life
+                {hero.subtitle}
               </p>
             </div>
           </FadeIn>
@@ -31,7 +42,7 @@ export default function ContactPage() {
         <Container>
           <div className="grid lg:grid-cols-2 gap-16">
             <FadeIn direction="left">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">{content.title}</h2>
               
               <div className="space-y-6">
                 <Card padding="md" className="border-l-4 border-purple-600">
@@ -43,8 +54,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-gray-900 mb-2">Email</h3>
-                      <a href="mailto:info@weavingdreams.com" className="text-purple-600 hover:text-purple-700 font-semibold">
-                        info@weavingdreams.com
+                      <a href={`mailto:${contact.email}`} className="text-purple-600 hover:text-purple-700 font-semibold">
+                        {contact.email}
                       </a>
                     </div>
                   </div>
@@ -59,8 +70,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-gray-900 mb-2">Phone</h3>
-                      <a href="tel:+915551234567" className="text-pink-600 hover:text-pink-700 font-semibold">
-                        +91 (555) 123-4567
+                      <a href={`tel:${contact.phone.replace(/\D/g, '')}`} className="text-pink-600 hover:text-pink-700 font-semibold">
+                        {contact.phone}
                       </a>
                     </div>
                   </div>
@@ -77,8 +88,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-lg text-gray-900 mb-2">Address</h3>
                       <p className="text-gray-700 font-medium">
-                        123 Event Street<br />
-                        City, State 12345
+                        {contact.address}
                       </p>
                     </div>
                   </div>
@@ -88,7 +98,7 @@ export default function ContactPage() {
 
             <FadeIn direction="right">
               <Card className="sticky top-24">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{content.formTitle}</h2>
                 <ContactForm />
               </Card>
             </FadeIn>

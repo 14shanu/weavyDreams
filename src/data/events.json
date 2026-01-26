@@ -13,7 +13,20 @@
       "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
       "seo": {
         "title": "Wedding Planning Services | Weaving Dreams",
-        "description": "Professional wedding planning and management services. From intimate ceremonies to grand celebrations, we bring your dream wedding to life."
+        "description": "Professional wedding planning and management services. From intimate ceremonies to grand celebrations, we bring your dream wedding to life.",
+        "keywords": ["wedding planning", "wedding planner", "wedding services", "wedding coordinator", "wedding management", "dream wedding"],
+        "openGraph": {
+          "title": "Professional Wedding Planning Services",
+          "description": "From dream to I do - Creating magical wedding experiences",
+          "image": "/images/events/weddings.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Wedding Planning Services",
+          "description": "Celebrate your unique love story with elegance",
+          "image": "/images/events/weddings.jpg"
+        }
       }
     },
     {
@@ -29,7 +42,20 @@
       "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
       "seo": {
         "title": "Corporate Event Planning | Weaving Dreams",
-        "description": "Expert corporate event planning for conferences, galas, product launches, and team building events. Professional execution guaranteed."
+        "description": "Expert corporate event planning for conferences, galas, product launches, and team building events. Professional execution guaranteed.",
+        "keywords": ["corporate event planning", "corporate events", "conference planning", "product launch", "team building events", "corporate gala"],
+        "openGraph": {
+          "title": "Professional Corporate Event Planning",
+          "description": "Impactful events that engage audiences and elevate your brand",
+          "image": "/images/events/corporate.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Corporate Event Planning",
+          "description": "Professional events that inspire and engage",
+          "image": "/images/events/corporate.jpg"
+        }
       }
     },
     {
@@ -45,7 +71,20 @@
       "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
       "seo": {
         "title": "Private Event Planning | Weaving Dreams",
-        "description": "Personalized planning for birthdays, anniversaries, and special celebrations. Make your private event unforgettable."
+        "description": "Personalized planning for birthdays, anniversaries, and special celebrations. Make your private event unforgettable.",
+        "keywords": ["private event planning", "birthday party planning", "anniversary celebration", "milestone events", "private celebrations", "party planning"],
+        "openGraph": {
+          "title": "Private Event Planning Services",
+          "description": "Celebrate life's special moments with personalized planning",
+          "image": "/images/events/private.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Private Event Planning",
+          "description": "Memorable celebrations for life's milestones",
+          "image": "/images/events/private.jpg"
+        }
       }
     },
     {
@@ -61,7 +100,20 @@
       "services": ["photography", "videography", "venue-decoration", "event-coordination"],
       "seo": {
         "title": "Exhibition & Expo Planning | Weaving Dreams",
-        "description": "Complete exhibition and trade show planning services. From booth design to event coordination, we ensure your success."
+        "description": "Complete exhibition and trade show planning services. From booth design to event coordination, we ensure your success.",
+        "keywords": ["exhibition planning", "expo services", "trade show planning", "booth design", "exhibition management", "expo coordination"],
+        "openGraph": {
+          "title": "Exhibition & Expo Planning Services",
+          "description": "Maximize your brand visibility and engagement at exhibitions",
+          "image": "/images/events/exhibitions.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Exhibition & Expo Planning",
+          "description": "Showcase your brand with professional planning",
+          "image": "/images/events/exhibitions.jpg"
+        }
       }
     },
     {
@@ -77,7 +129,20 @@
       "services": ["photography", "videography", "venue-decoration", "event-coordination"],
       "seo": {
         "title": "Proposal Planning Services | Weaving Dreams",
-        "description": "Plan the perfect proposal with our expert coordination. From intimate moments to grand gestures, we make it unforgettable."
+        "description": "Plan the perfect proposal with our expert coordination. From intimate moments to grand gestures, we make it unforgettable.",
+        "keywords": ["proposal planning", "marriage proposal", "proposal ideas", "romantic proposal", "proposal coordination", "engagement planning"],
+        "openGraph": {
+          "title": "Proposal Planning Services",
+          "description": "Creating unforgettable proposal experiences",
+          "image": "/images/events/proposals.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Proposal Planning",
+          "description": "The perfect moment, perfectly planned",
+          "image": "/images/events/proposals.jpg"
+        }
       }
     }
   ]

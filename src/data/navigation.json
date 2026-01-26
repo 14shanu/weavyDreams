@@ -44,14 +44,6 @@
           { "label": "Contact", "href": "/contact" },
           { "label": "Take Quiz", "href": "/quiz" }
         ]
-      },
-      {
-        "title": "Social",
-        "links": [
-          { "label": "Facebook", "href": "https://facebook.com/weavingdreams" },
-          { "label": "Instagram", "href": "https://instagram.com/weavingdreams" },
-          { "label": "LinkedIn", "href": "https://linkedin.com/company/weavingdreams" }
-        ]
       }
     ]
   }

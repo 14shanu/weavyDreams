@@ -81,6 +81,19 @@ export interface PageConfig {
   seo?: {
     title?: string;
     description?: string;
+    keywords?: string[];
+    openGraph?: {
+      title: string;
+      description: string;
+      image: string;
+      type: string;
+    };
+    twitter?: {
+      card: string;
+      title: string;
+      description: string;
+      image: string;
+    };
   };
   sections: SectionConfig[];
 }

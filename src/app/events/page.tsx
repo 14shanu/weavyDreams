@@ -1,17 +1,26 @@
+import { Metadata } from 'next';
 import { getEvents } from '@/lib/api/events';
 import Section from '@/ui/layout/Section';
 import Container from '@/ui/layout/Container';
 import EventTypeCard from '@/ui/components/EventTypeCard';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
+import eventsListingData from '@/data/pages/events-listing.json';
 
-export const metadata = {
-  title: 'Event Types | Weaving Dreams',
-  description: 'Explore our event planning services for weddings, corporate events, private celebrations, exhibitions, and proposals',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = eventsListingData;
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    openGraph: seo.openGraph,
+    twitter: seo.twitter,
+  };
+}
 
 export default async function EventsPage() {
   const { eventTypes } = await getEvents();
+  const { hero } = eventsListingData;
 
   return (
     <>
@@ -19,10 +28,10 @@ export default async function EventsPage() {
         <Container>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-[var(--font-heading)] text-white text-center mb-4">
-              Event Types
+              {hero.title}
             </h1>
             <p className="text-xl text-white/80 text-center max-w-3xl mx-auto">
-              Professional event planning for every occasion
+              {hero.subtitle}
             </p>
           </FadeIn>
         </Container>

@@ -41,7 +41,7 @@ export default async function PackagesPage() {
         <Section key={eventType} background="alt">
           <Container>
             <FadeIn>
-              <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-center mb-12 capitalize">
+              <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-gray-900 text-center mb-12 capitalize">
                 {eventType} Packages
               </h2>
             </FadeIn>

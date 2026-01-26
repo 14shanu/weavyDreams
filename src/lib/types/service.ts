@@ -11,6 +11,23 @@ export interface Service {
     basePrice: number;
     unit: string;
   };
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+    openGraph: {
+      title: string;
+      description: string;
+      image: string;
+      type: string;
+    };
+    twitter: {
+      card: string;
+      title: string;
+      description: string;
+      image: string;
+    };
+  };
 }
 
 export interface ServicesData {

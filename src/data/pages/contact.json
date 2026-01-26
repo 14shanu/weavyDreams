@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "Let's discuss your event and bring your vision to life"
+  },
+  "content": {
+    "title": "Get In Touch",
+    "formTitle": "Send Us a Message"
+  },
+  "seo": {
+    "title": "Contact Us | Weaving Dreams",
+    "description": "Get in touch with us to discuss your event planning needs. Email, phone, or visit us. Professional event planning consultation available.",
+    "keywords": ["contact event planner", "event planning consultation", "get in touch", "event planning inquiry"],
+    "openGraph": {
+      "title": "Contact Weaving Dreams",
+      "description": "Let's discuss your event and bring your vision to life",
+      "image": "/images/og-contact.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Contact Us",
+      "description": "Let's discuss your event planning needs",
+      "image": "/images/og-contact.jpg"
+    }
+  }
+}

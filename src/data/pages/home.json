@@ -2,7 +2,20 @@
   "slug": "home",
   "seo": {
     "title": "Weaving Dreams – Creating Unforgettable Events",
-    "description": "Professional event planning and management services. From concept to execution, we bring your vision to life."
+    "description": "Professional event planning and management services. From concept to execution, we bring your vision to life with weddings, corporate events, and celebrations.",
+    "keywords": ["event planning", "wedding planner", "corporate events", "event management", "party planning", "event coordinator"],
+    "openGraph": {
+      "title": "Weaving Dreams – Creating Unforgettable Events",
+      "description": "Professional event planning from concept to execution",
+      "image": "/images/hero.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Weaving Dreams – Creating Unforgettable Events",
+      "description": "Professional event planning from concept to execution",
+      "image": "/images/hero.jpg"
+    }
   },
   "sections": [
     {

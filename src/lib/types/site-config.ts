@@ -22,9 +22,10 @@ export interface SiteConfig {
     address: string;
   };
   social: {
-    facebook: string;
-    instagram: string;
-    linkedin: string;
+    [key: string]: {
+      url: string;
+      icon: string;
+    };
   };
 }
 

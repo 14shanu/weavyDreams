@@ -66,8 +66,17 @@
     "address": "123 Event Street, City, State 12345"
   },
   "social": {
-    "facebook": "https://facebook.com/weavingdreams",
-    "instagram": "https://instagram.com/weavingdreams",
-    "linkedin": "https://linkedin.com/company/weavingdreams"
+    "facebook": {
+      "url": "https://facebook.com/weavingdreams",
+      "icon": "facebook"
+    },
+    "instagram": {
+      "url": "https://instagram.com/weavingdreams",
+      "icon": "instagram"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/company/weavingdreams",
+      "icon": "linkedin"
+    }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Event Types",
+    "subtitle": "Professional event planning for every occasion"
+  },
+  "seo": {
+    "title": "Event Types | Weaving Dreams",
+    "description": "Explore our event planning services for weddings, corporate events, private celebrations, exhibitions, and proposals. Professional planning for every occasion.",
+    "keywords": ["event types", "wedding planning", "corporate events", "private celebrations", "exhibitions", "proposal planning"],
+    "openGraph": {
+      "title": "Event Types - Professional Planning for Every Occasion",
+      "description": "Weddings, corporate events, celebrations, and more",
+      "image": "/images/og-events.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Event Types",
+      "description": "Professional planning for every occasion",
+      "image": "/images/og-events.jpg"
+    }
+  }
+}

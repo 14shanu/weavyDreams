@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Section from '@/ui/layout/Section';
 import Container from '@/ui/layout/Container';
 import Card from '@/ui/elements/Card';
@@ -5,39 +6,21 @@ import Button from '@/ui/elements/Button';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
 import Link from 'next/link';
+import aboutData from '@/data/pages/about.json';
 
-export const metadata = {
-  title: 'About Us | Weaving Dreams',
-  description: 'Learn about our passion for creating unforgettable events and our commitment to excellence',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = aboutData;
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    openGraph: seo.openGraph,
+    twitter: seo.twitter,
+  };
+}
 
 export default function AboutPage() {
-  const values = [
-    {
-      title: 'Excellence',
-      description: 'We strive for perfection in every detail of your event',
-      icon: '⭐',
-      color: 'from-yellow-400 to-orange-500',
-    },
-    {
-      title: 'Creativity',
-      description: 'Innovative solutions that bring your unique vision to life',
-      icon: '🎨',
-      color: 'from-purple-400 to-pink-500',
-    },
-    {
-      title: 'Reliability',
-      description: 'Dependable service you can trust for your special day',
-      icon: '🤝',
-      color: 'from-blue-400 to-cyan-500',
-    },
-    {
-      title: 'Passion',
-      description: 'We love what we do and it shows in every event',
-      icon: '❤️',
-      color: 'from-red-400 to-pink-500',
-    },
-  ];
+  const { hero, story, values, cta } = aboutData;
 
   return (
     <>
@@ -46,10 +29,10 @@ export default function AboutPage() {
           <FadeIn>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                About Weaving Dreams
+                {hero.title}
               </h1>
               <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-                Creating unforgettable events from concept to execution
+                {hero.subtitle}
               </p>
             </div>
           </FadeIn>
@@ -60,16 +43,12 @@ export default function AboutPage() {
         <Container>
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <FadeIn direction="left">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Weaving Dreams was founded with a simple mission: to transform ordinary events into extraordinary experiences. With years of expertise in event planning and management, we bring creativity, precision, and passion to every project.
-              </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                From intimate celebrations to grand productions, we approach each event with strategic clarity and creative vision. Our team is dedicated to understanding your unique needs and bringing your vision to life.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We believe that every event tells a story, and we're here to help you tell yours in the most memorable way possible.
-              </p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">{story.title}</h2>
+              {story.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </FadeIn>
 
             <FadeIn direction="right">
@@ -105,9 +84,9 @@ export default function AboutPage() {
         <Container>
           <FadeIn>
             <div className="text-center text-white">
-              <h2 className="text-4xl font-bold mb-6">Ready to Start Planning?</h2>
+              <h2 className="text-4xl font-bold mb-6">{cta.title}</h2>
               <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-                Let's create something amazing together. Get in touch to discuss your event.
+                {cta.subtitle}
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
                 <Link href="/contact">

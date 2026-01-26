@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getEventBySlug } from '@/lib/api/events';
 import { getPackagesByEventType } from '@/lib/api/packages';
@@ -9,6 +10,35 @@ import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
 
 interface PageProps {
   params: Promise<{ eventType: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { eventType } = await params;
+  const event = await getEventBySlug(eventType);
+
+  if (!event || !event.seo) {
+    return {
+      title: 'Event Not Found',
+    };
+  }
+
+  return {
+    title: event.seo.title,
+    description: event.seo.description,
+    keywords: event.seo.keywords,
+    openGraph: {
+      title: event.seo.openGraph.title,
+      description: event.seo.openGraph.description,
+      images: [event.seo.openGraph.image],
+      type: event.seo.openGraph.type as 'website',
+    },
+    twitter: {
+      card: event.seo.twitter.card as 'summary_large_image',
+      title: event.seo.twitter.title,
+      description: event.seo.twitter.description,
+      images: [event.seo.twitter.image],
+    }
+  };
 }
 
 export default async function EventTypePage({ params }: PageProps) {
@@ -63,20 +93,4 @@ export default async function EventTypePage({ params }: PageProps) {
       </Section>
     </>
   );
-}
-
-export async function generateMetadata({ params }: PageProps) {
-  const { eventType } = await params;
-  const event = await getEventBySlug(eventType);
-
-  if (!event) {
-    return {
-      title: 'Event Not Found',
-    };
-  }
-
-  return {
-    title: event.seo.title,
-    description: event.seo.description,
-  };
 }

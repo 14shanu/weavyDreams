@@ -17,6 +17,23 @@
       "pricing": {
         "basePrice": 1500,
         "unit": "event"
+      },
+      "seo": {
+        "title": "Professional Event Photography Services | Weaving Dreams",
+        "description": "Capture every precious moment with our professional event photography services. High-resolution images, expert editing, and online gallery access for weddings, corporate events, and celebrations.",
+        "keywords": ["event photography", "wedding photographer", "corporate photography", "professional photographer", "event photographer near me", "photography services"],
+        "openGraph": {
+          "title": "Professional Event Photography Services",
+          "description": "Stunning photography for weddings, corporate events, and special celebrations",
+          "image": "/images/services/photography.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Event Photography",
+          "description": "Capture every moment with expert photographers",
+          "image": "/images/services/photography.jpg"
+        }
       }
     },
     {
@@ -36,6 +53,23 @@
       "pricing": {
         "basePrice": 2000,
         "unit": "event"
+      },
+      "seo": {
+        "title": "Professional Event Videography Services | Weaving Dreams",
+        "description": "Cinematic 4K videography for your special events. Professional editing, highlight reels, and drone footage available. Relive your wedding, corporate event, or celebration forever.",
+        "keywords": ["event videography", "wedding videographer", "4K video recording", "cinematic videography", "drone footage", "professional video services"],
+        "openGraph": {
+          "title": "Professional Event Videography Services",
+          "description": "Cinematic 4K videography with professional editing and drone footage",
+          "image": "/images/services/videography.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Event Videography",
+          "description": "Cinematic storytelling for your special moments",
+          "image": "/images/services/videography.jpg"
+        }
       }
     },
     {
@@ -55,6 +89,23 @@
       "pricing": {
         "basePrice": 50,
         "unit": "per person"
+      },
+      "seo": {
+        "title": "Professional Event Catering Services | Weaving Dreams",
+        "description": "Exceptional catering services with custom menus for weddings, corporate events, and celebrations. Dietary accommodations, professional staff, and full setup included.",
+        "keywords": ["event catering", "wedding catering", "corporate catering", "catering services", "custom menu planning", "professional catering"],
+        "openGraph": {
+          "title": "Professional Event Catering Services",
+          "description": "Delicious cuisine with custom menus for every palate and occasion",
+          "image": "/images/services/catering.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Event Catering",
+          "description": "Custom menus and exceptional service for your event",
+          "image": "/images/services/catering.jpg"
+        }
       }
     },
     {
@@ -74,6 +125,23 @@
       "pricing": {
         "basePrice": 2500,
         "unit": "event"
+      },
+      "seo": {
+        "title": "Professional Venue Decoration Services | Weaving Dreams",
+        "description": "Transform your event space with creative decoration services. Custom designs, premium materials, professional lighting, and complete setup for weddings and corporate events.",
+        "keywords": ["venue decoration", "event decoration", "wedding decoration", "corporate event decor", "lighting design", "event styling"],
+        "openGraph": {
+          "title": "Professional Venue Decoration Services",
+          "description": "Transform your space with stunning custom designs and premium decor",
+          "image": "/images/services/venue-decoration.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Venue Decoration",
+          "description": "Stunning designs that bring your vision to life",
+          "image": "/images/services/venue-decoration.jpg"
+        }
       }
     },
     {
@@ -93,6 +161,23 @@
       "pricing": {
         "basePrice": 1200,
         "unit": "event"
+      },
+      "seo": {
+        "title": "Professional Event Entertainment Services | Weaving Dreams",
+        "description": "Keep your guests engaged with professional DJ, MC, and live music services. Custom playlists, premium sound systems, and memorable entertainment for any event.",
+        "keywords": ["event entertainment", "wedding DJ", "event MC", "live music", "DJ services", "event entertainment services"],
+        "openGraph": {
+          "title": "Professional Event Entertainment Services",
+          "description": "DJ, MC, and live music services to create unforgettable experiences",
+          "image": "/images/services/entertainment.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Event Entertainment",
+          "description": "Keep your guests engaged and entertained",
+          "image": "/images/services/entertainment.jpg"
+        }
       }
     },
     {
@@ -112,6 +197,23 @@
       "pricing": {
         "basePrice": 1800,
         "unit": "event"
+      },
+      "seo": {
+        "title": "Professional Event Coordination Services | Weaving Dreams",
+        "description": "Stress-free event management with full planning, vendor coordination, and day-of coordination. Ensure every detail is perfect for your wedding or corporate event.",
+        "keywords": ["event coordination", "event planning", "wedding coordinator", "event management", "day-of coordination", "professional event planner"],
+        "openGraph": {
+          "title": "Professional Event Coordination Services",
+          "description": "Stress-free event management ensuring every detail is perfect",
+          "image": "/images/services/event-coordination.jpg",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Professional Event Coordination",
+          "description": "Expert planning and flawless execution",
+          "image": "/images/services/event-coordination.jpg"
+        }
       }
     }
   ]

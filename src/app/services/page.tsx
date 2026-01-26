@@ -1,17 +1,26 @@
+import { Metadata } from 'next';
 import { getServices } from '@/lib/api/services';
 import Section from '@/ui/layout/Section';
 import Container from '@/ui/layout/Container';
 import ServiceCard from '@/ui/components/ServiceCard';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
+import servicesListingData from '@/data/pages/services-listing.json';
 
-export const metadata = {
-  title: 'Our Services | Weaving Dreams',
-  description: 'Comprehensive event planning services to bring your vision to life',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = servicesListingData;
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    openGraph: seo.openGraph,
+    twitter: seo.twitter,
+  };
+}
 
 export default async function ServicesPage() {
   const { services } = await getServices();
+  const { hero } = servicesListingData;
 
   return (
     <>
@@ -19,10 +28,10 @@ export default async function ServicesPage() {
         <Container>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-[var(--font-heading)] text-white text-center mb-4">
-              Our Services
+              {hero.title}
             </h1>
             <p className="text-xl text-white/80 text-center max-w-3xl mx-auto">
-              Comprehensive event services to bring your vision to life
+              {hero.subtitle}
             </p>
           </FadeIn>
         </Container>
