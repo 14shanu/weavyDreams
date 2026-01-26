@@ -1,11 +1,8 @@
 import { PageConfig } from "@/lib/types";
 
-const BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
-
 export async function getPageContent(slug: string): Promise<PageConfig> {
-  const url = BASE + "/api/content/" + slug;
-
-  const res = await fetch(url, { cache: "no-store" });
+  const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+  const res = await fetch(`${baseUrl}/api/content/${slug}`, { cache: "no-store" });
 
   if (!res.ok) {
     throw new Error("Failed to fetch page: " + slug);
