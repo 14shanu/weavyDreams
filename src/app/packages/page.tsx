@@ -9,7 +9,7 @@ import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
 import Link from 'next/link';
 
 export async function generateMetadata() {
-  const pageData = await readPageJSON('packages-listing.json');
+  const pageData: any = await readPageJSON('packages-listing.json');
   return {
     title: pageData.seo.title,
     description: pageData.seo.description,
@@ -21,7 +21,7 @@ export async function generateMetadata() {
 
 export default async function PackagesPage() {
   const { packages } = await getPackages();
-  const pageData = await readPageJSON('packages-listing.json');
+  const pageData: any = await readPageJSON('packages-listing.json');
 
   // Group packages by event type
   const packagesByEvent = packages.reduce((acc, pkg) => {

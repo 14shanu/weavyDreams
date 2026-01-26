@@ -87,7 +87,7 @@ export default function QuizResultsPage() {
 
     // Sort by score and get top 3
     const top3 = scored
-      .sort((a, b) => b.score - a.score)
+      .sort((a: any, b: any) => b.score - a.score)
       .slice(0, 3);
 
     setRecommendations(top3);
