@@ -155,9 +155,10 @@ export default function MediaManagerPage() {
   };
 
   const handleReplace = async (filePath: string) => {
+    const isVideo = filePath.includes('/videos/');
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = 'image/*';
+    input.accept = isVideo ? 'video/*' : 'image/*';
     input.onchange = async (e: any) => {
       const file = e.target.files?.[0];
       if (!file) return;
@@ -315,11 +316,11 @@ export default function MediaManagerPage() {
               <input
                 type="file"
                 name="file"
-                accept="image/*"
+                accept="image/*,video/*"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                 required
               />
-              <p className="text-sm text-gray-500 mt-1">Supported: JPG, PNG, WebP, SVG | Max: 5MB</p>
+              <p className="text-sm text-gray-500 mt-1">Supported: Images (JPG, PNG, WebP, SVG) | Videos (MP4, WebM) | Max: 50MB</p>
             </div>
 
             <button

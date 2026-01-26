@@ -35,11 +35,62 @@ export default function QuizResultsPage() {
   }, [mounted, isComplete]);
 
   const fetchRecommendations = async () => {
-    // TODO: Implement recommendation algorithm
-    // For now, fetch some packages
     const response = await fetch('/api/packages');
     const data = await response.json();
-    setRecommendations(data.packages?.slice(0, 3) || []);
+    const allPackages = data.packages || [];
+
+    // Extract values from answer objects
+    const getAnswer = (questionId: string) => {
+      const answer = answers.find((a) => a.questionId === questionId);
+      return answer?.value;
+    };
+
+    const eventType = getAnswer('event-type');
+    const guestCount = getAnswer('guest-count');
+    const budget = getAnswer('budget');
+    const services = getAnswer('priority-services') || [];
+    const style = getAnswer('style-preference');
+
+    // Determine tier from budget and style
+    let targetTier = 'premium';
+    if (budget === 'budget-low' || style === 'simple') targetTier = 'essential';
+    if (budget === 'budget-high' || budget === 'budget-premium' || style === 'luxury') targetTier = 'luxury';
+
+    // Filter by event type FIRST
+    const matchingEventPackages = allPackages.filter((pkg: any) => pkg.eventType === eventType);
+
+    if (matchingEventPackages.length === 0) {
+      setRecommendations(allPackages.slice(0, 3));
+      return;
+    }
+
+    // Score only matching event packages
+    const scored = matchingEventPackages.map((pkg: any) => {
+      let score = 0;
+
+      // Tier match
+      if (pkg.tier === targetTier) score += 50;
+      else if (targetTier === 'premium' && (pkg.tier === 'essential' || pkg.tier === 'luxury')) score += 25;
+
+      // Service match
+      const serviceArray = Array.isArray(services) ? services : [services];
+      const matchedServices = serviceArray.filter((s: string) => pkg.services?.includes(s));
+      score += matchedServices.length * 10;
+
+      // Guest count consideration
+      if (guestCount === 'small' && pkg.tier === 'essential') score += 10;
+      if (guestCount === 'medium' && pkg.tier === 'premium') score += 10;
+      if ((guestCount === 'large' || guestCount === 'xlarge') && pkg.tier === 'luxury') score += 10;
+
+      return { ...pkg, score };
+    });
+
+    // Sort by score and get top 3
+    const top3 = scored
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3);
+
+    setRecommendations(top3);
   };
 
   const handleRetake = () => {
@@ -86,11 +137,14 @@ export default function QuizResultsPage() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              Not quite right? Browse all packages or retake the quiz
+              Not quite right? Browse all packages, build your own, or retake the quiz
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center flex-wrap">
               <Button variant="outline" onClick={handleRetake}>
                 Retake Quiz
+              </Button>
+              <Button variant="secondary" onClick={() => router.push('/packages/build')}>
+                Build Your Own
               </Button>
               <Button variant="primary" onClick={() => router.push('/packages')}>
                 Browse All Packages

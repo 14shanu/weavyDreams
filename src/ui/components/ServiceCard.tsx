@@ -1,30 +1,20 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Card from '@/ui/elements/Card';
 import { Service } from '@/lib/types/service';
+import MediaGallery from '@/components/media/MediaGallery';
+import { normalizeMedia } from '@/lib/media';
 
 interface ServiceCardProps {
   service: Service;
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
+  const media = normalizeMedia(service);
+
   return (
     <Link href={`/services/${service.slug}`}>
       <Card hover padding="none" className="overflow-hidden h-full bg-white">
-        <div className="relative h-48 w-full">
-          <Image
-            src={service.image}
-            alt={service.name}
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute top-4 left-4">
-            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-2xl">{service.icon}</span>
-            </div>
-          </div>
-        </div>
+        <MediaGallery media={media} aspectRatio="aspect-[4/3]" />
         <div className="p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-3">{service.name}</h3>
           <p className="text-base text-gray-600 line-clamp-3 mb-4">{service.description}</p>

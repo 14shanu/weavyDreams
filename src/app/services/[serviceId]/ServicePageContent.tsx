@@ -1,12 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Container from '@/ui/layout/Container';
 import Button from '@/ui/elements/Button';
 import FadeIn from '@/ui/animations/FadeIn';
 import QuoteRequestModal from '@/ui/modals/QuoteRequestModal';
 import ServiceExperience from '@/components/ServiceExperience';
+import MediaGallery from '@/components/media/MediaGallery';
+import { normalizeMedia } from '@/lib/media';
 
 interface PageProps {
   params: Promise<{ serviceId: string }>;
@@ -27,6 +28,8 @@ export default function ServicePageContent({ params }: PageProps) {
   }, [params]);
 
   if (!service) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-primary)]"></div></div>;
+
+  const media = normalizeMedia(service);
 
   return (
     <ServiceExperience service={service}>
@@ -54,14 +57,8 @@ export default function ServicePageContent({ params }: PageProps) {
         <Container>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src={service.image}
-                  alt={service.name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <MediaGallery media={media} aspectRatio="aspect-[4/3]" />
               </div>
             </FadeIn>
 

@@ -45,7 +45,22 @@
         "symbol": "€",
         "rate": 0.011,
         "locale": "en-EU",
-        "countries": ["DE", "FR", "IT", "ES", "NL", "BE", "AT", "PT", "IE", "GR", "FI", "SE", "DK", "NO"]
+        "countries": [
+          "DE",
+          "FR",
+          "IT",
+          "ES",
+          "NL",
+          "BE",
+          "AT",
+          "PT",
+          "IE",
+          "GR",
+          "FI",
+          "SE",
+          "DK",
+          "NO"
+        ]
       },
       "GBP": {
         "symbol": "£",
@@ -77,6 +92,32 @@
     "linkedin": {
       "url": "https://linkedin.com/company/weavingdreams",
       "icon": "linkedin"
+    }
+  },
+  "media": {
+    "storage": "local",
+    "basePath": "/images",
+    "videoBasePath": "/videos",
+    "cloudinary": {
+      "enabled": false,
+      "cloudName": "",
+      "uploadPreset": ""
+    },
+    "optimization": {
+      "autoFormat": true,
+      "quality": "auto",
+      "lazyLoad": true
+    },
+    "gallery": {
+      "defaultCarousel": {
+        "enabled": true,
+        "autoplay": true,
+        "interval": 5000,
+        "loop": true,
+        "showArrows": true,
+        "showDots": true,
+        "swipeable": true
+      }
     }
   },
   "experience": {

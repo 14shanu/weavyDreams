@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import { getEvents } from '@/lib/api/events';
+import { getServices } from '@/lib/api/services';
 
 export async function GET() {
-  const data = await getEvents();
+  const data = await getServices();
   return NextResponse.json(data);
 }

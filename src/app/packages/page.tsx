@@ -1,17 +1,27 @@
 import { getPackages } from '@/lib/api/packages';
+import { readPageJSON } from '@/lib/admin/file-system';
 import Section from '@/ui/layout/Section';
 import Container from '@/ui/layout/Container';
 import PackageCard from '@/ui/components/PackageCard';
+import Button from '@/ui/elements/Button';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
+import Link from 'next/link';
 
-export const metadata = {
-  title: 'Our Packages | Weaving Dreams',
-  description: 'Pre-designed event packages for every occasion and budget',
-};
+export async function generateMetadata() {
+  const pageData = await readPageJSON('packages-listing.json');
+  return {
+    title: pageData.seo.title,
+    description: pageData.seo.description,
+    keywords: pageData.seo.keywords,
+    openGraph: pageData.seo.openGraph,
+    twitter: pageData.seo.twitter,
+  };
+}
 
 export default async function PackagesPage() {
   const { packages } = await getPackages();
+  const pageData = await readPageJSON('packages-listing.json');
 
   // Group packages by event type
   const packagesByEvent = packages.reduce((acc, pkg) => {
@@ -28,10 +38,10 @@ export default async function PackagesPage() {
         <Container>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-[var(--font-heading)] text-white text-center mb-4">
-              Our Packages
+              {pageData.hero.title}
             </h1>
             <p className="text-xl text-white/80 text-center max-w-3xl mx-auto">
-              Pre-designed packages for every event type and budget
+              {pageData.hero.subtitle}
             </p>
           </FadeIn>
         </Container>
@@ -56,6 +66,24 @@ export default async function PackagesPage() {
           </Container>
         </Section>
       ))}
+
+      <Section background="default">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-white mb-4">
+              {pageData.cta.title}
+            </h2>
+            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+              {pageData.cta.description}
+            </p>
+            <Link href={pageData.cta.buttonLink}>
+              <Button variant="primary" size="lg">
+                {pageData.cta.buttonText}
+              </Button>
+            </Link>
+          </div>
+        </Container>
+      </Section>
     </>
   );
 }

@@ -8,6 +8,34 @@
       "description": "Professional photography services to document your special event with stunning clarity and artistic vision.",
       "icon": "camera",
       "image": "/images/services/photography.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/services/photography.jpg",
+            "alt": "Professional event photography"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/photography-2.jpg",
+            "alt": "Wedding photography",
+            "caption": "Capturing your special moments"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/photography-3.jpg",
+            "alt": "Portrait photography"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 4000,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "Professional photographers",
         "High-resolution images",
@@ -55,6 +83,36 @@
       "description": "Cinematic videography that tells your event's story with professional editing and stunning visuals.",
       "icon": "video",
       "image": "/images/services/videography.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "video",
+            "src": "/videos/services/videography-sample.mp4",
+            "alt": "Cinematic event videography",
+            "poster": "/images/services/videography.jpg",
+            "caption": "4K cinematic storytelling"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/videography-2.jpg",
+            "alt": "Professional video equipment"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/videography-3.jpg",
+            "alt": "Drone footage",
+            "caption": "Stunning aerial perspectives"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 5000,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "4K video recording",
         "Professional editing",
@@ -91,6 +149,40 @@
       "description": "Exceptional catering services with customizable menus to delight your guests.",
       "icon": "utensils",
       "image": "/images/services/catering.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/services/catering.jpg",
+            "alt": "Gourmet catering display"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/catering-2.jpg",
+            "alt": "Custom menu options",
+            "caption": "Customized menus for every taste"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/catering-3.jpg",
+            "alt": "Professional service staff"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/catering-4.jpg",
+            "alt": "Elegant food presentation",
+            "caption": "Beautiful presentation"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 4500,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "Custom menu planning",
         "Dietary accommodations",
@@ -127,6 +219,34 @@
       "description": "Creative decoration services that bring your vision to life with stunning visual impact.",
       "icon": "sparkles",
       "image": "/images/services/venue-decoration.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/services/venue-decoration.jpg",
+            "alt": "Elegant venue decoration"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/venue-decoration-2.jpg",
+            "alt": "Custom lighting design",
+            "caption": "Stunning lighting transforms any space"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/venue-decoration-3.jpg",
+            "alt": "Floral arrangements"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 4000,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "Custom design concepts",
         "Premium decor materials",
@@ -163,6 +283,34 @@
       "description": "Professional entertainment options to create memorable experiences for your guests.",
       "icon": "music",
       "image": "/images/services/entertainment.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/services/entertainment.jpg",
+            "alt": "Professional DJ services"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/entertainment-2.jpg",
+            "alt": "Live music performance",
+            "caption": "Live music to set the perfect mood"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/entertainment-3.jpg",
+            "alt": "Premium sound system"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 4000,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "DJ and MC services",
         "Live music options",
@@ -210,6 +358,29 @@
       "description": "Professional coordination to ensure every detail is perfect and your event runs smoothly.",
       "icon": "clipboard",
       "image": "/images/services/event-coordination.jpg",
+      "media": {
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/services/event-coordination.jpg",
+            "alt": "Professional event planning"
+          },
+          {
+            "type": "image",
+            "src": "/images/services/event-coordination-2.jpg",
+            "alt": "Timeline management",
+            "caption": "Every detail perfectly timed"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoplay": true,
+          "interval": 5000,
+          "loop": true,
+          "showArrows": true,
+          "showDots": true
+        }
+      },
       "features": [
         "Full event planning",
         "Vendor coordination",

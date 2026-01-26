@@ -1,3 +1,5 @@
+import { MediaGalleryConfig } from '../media';
+
 export interface EventType {
   id: string;
   name: string;
@@ -5,6 +7,7 @@ export interface EventType {
   tagline: string;
   description: string;
   image: string;
+  media?: MediaGalleryConfig;
   icon: string;
   featured: boolean;
   packages: string[];

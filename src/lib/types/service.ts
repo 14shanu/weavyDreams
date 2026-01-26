@@ -1,3 +1,5 @@
+import { MediaGalleryConfig } from '../media';
+
 export interface Service {
   id: string;
   name: string;
@@ -6,6 +8,7 @@ export interface Service {
   description: string;
   icon: string;
   image: string;
+  media?: MediaGalleryConfig;
   features: string[];
   pricing: {
     basePrice: number;

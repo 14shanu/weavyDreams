@@ -1,3 +1,5 @@
+import { MediaGalleryConfig } from '../media';
+
 export interface Package {
   id: string;
   name: string;
@@ -9,6 +11,7 @@ export interface Package {
   price: number;
   guestCount: string;
   image: string;
+  media?: MediaGalleryConfig;
   services: string[];
   features: string[];
 }

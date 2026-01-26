@@ -1,23 +1,21 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Card from '@/ui/elements/Card';
 import { EventType } from '@/lib/types/event';
+import MediaGallery from '@/components/media/MediaGallery';
+import { normalizeMedia } from '@/lib/media';
 
 interface EventTypeCardProps {
   event: EventType;
 }
 
 export default function EventTypeCard({ event }: EventTypeCardProps) {
+  const media = normalizeMedia(event);
+
   return (
     <Link href={`/events/${event.slug}`}>
       <Card hover padding="none" className="overflow-hidden group h-full">
-        <div className="relative h-64 w-full">
-          <Image
-            src={event.image}
-            alt={event.name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-          />
+        <div className="relative">
+          <MediaGallery media={media} aspectRatio="aspect-[4/3]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
             <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold mb-3">

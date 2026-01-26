@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Build Your Own Package",
+    "subtitle": "Select the services you need and create a custom package tailored to your event"
+  },
+  "steps": [
+    {
+      "id": "event-type",
+      "title": "Choose Event Type",
+      "description": "What type of event are you planning?"
+    },
+    {
+      "id": "services",
+      "title": "Select Services",
+      "description": "Pick the services you need for your event"
+    },
+    {
+      "id": "details",
+      "title": "Event Details",
+      "description": "Tell us more about your event"
+    },
+    {
+      "id": "review",
+      "title": "Review & Submit",
+      "description": "Review your custom package and get a quote"
+    }
+  ],
+  "seo": {
+    "title": "Build Your Own Package | Weaving Dreams",
+    "description": "Create a custom event package by selecting exactly the services you need",
+    "keywords": ["custom event package", "build your own package", "custom wedding package", "event package builder"],
+    "openGraph": {
+      "title": "Build Your Own Event Package - Weaving Dreams",
+      "description": "Create a custom package tailored to your event needs",
+      "image": "/images/og-package-builder.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Build Your Own Package",
+      "description": "Create a custom event package",
+      "image": "/images/og-package-builder.jpg"
+    }
+  }
+}

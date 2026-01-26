@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Our Packages",
+    "subtitle": "Pre-designed packages for every event type and budget"
+  },
+  "cta": {
+    "title": "Can't Find What You're Looking For?",
+    "description": "Build your own custom package by selecting exactly the services you need",
+    "buttonText": "Build Your Own Package",
+    "buttonLink": "/packages/build"
+  },
+  "seo": {
+    "title": "Our Packages | Weaving Dreams",
+    "description": "Pre-designed event packages for every occasion and budget",
+    "keywords": ["event packages", "wedding packages", "corporate event packages", "party packages", "event planning packages"],
+    "openGraph": {
+      "title": "Event Packages - Weaving Dreams",
+      "description": "Pre-designed packages for weddings, corporate events, and celebrations",
+      "image": "/images/og-packages.jpg",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Our Event Packages",
+      "description": "Pre-designed packages for every occasion",
+      "image": "/images/og-packages.jpg"
+    }
+  }
+}

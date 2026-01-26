@@ -23,13 +23,17 @@ export async function POST(request: NextRequest) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    const uploadDir = path.join(process.cwd(), 'public/images', category);
+    // Determine if it's a video or image
+    const isVideo = file.type.startsWith('video/');
+    const baseDir = isVideo ? 'videos' : 'images';
+    
+    const uploadDir = path.join(process.cwd(), `public/${baseDir}`, category);
     await mkdir(uploadDir, { recursive: true });
 
     const filePath = path.join(uploadDir, file.name);
     await writeFile(filePath, buffer);
 
-    const publicPath = `/images/${category}/${file.name}`;
+    const publicPath = `/${baseDir}/${category}/${file.name}`;
 
     return NextResponse.json({
       success: true,

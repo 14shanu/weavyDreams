@@ -27,11 +27,24 @@ export async function scanForMissingFiles(): Promise<MissingFile[]> {
     for (const key in obj) {
       const value = obj[key];
       
-      if (typeof value === 'string' && (key.includes('image') || key.includes('icon') || key.includes('logo'))) {
-        if (value.startsWith('/images/') || value.startsWith('/')) {
+      // Check for direct image/video/icon/logo fields
+      if (typeof value === 'string' && (key.includes('image') || key.includes('icon') || key.includes('logo') || key.includes('poster'))) {
+        if (value.startsWith('/images/') || value.startsWith('/videos/') || value.startsWith('/')) {
           paths.push(value);
         }
-      } else if (typeof value === 'object' && value !== null) {
+      }
+      // Check for media.items array (new media gallery format)
+      else if (key === 'items' && Array.isArray(value)) {
+        value.forEach((item: any) => {
+          if (item.src && typeof item.src === 'string' && (item.src.startsWith('/images/') || item.src.startsWith('/videos/'))) {
+            paths.push(item.src);
+          }
+          if (item.poster && typeof item.poster === 'string' && item.poster.startsWith('/')) {
+            paths.push(item.poster);
+          }
+        });
+      }
+      else if (typeof value === 'object' && value !== null) {
         paths.push(...extractImagePaths(value, `${prefix}${key}.`));
       }
     }
@@ -111,7 +124,7 @@ export async function scanForMissingFiles(): Promise<MissingFile[]> {
 }
 
 export async function listMediaFiles(): Promise<any[]> {
-  const publicImagesDir = path.join(process.cwd(), 'public/images');
+  const publicDir = path.join(process.cwd(), 'public');
   const files: any[] = [];
 
   const scanDirectory = (dir: string, category = '') => {
@@ -139,6 +152,12 @@ export async function listMediaFiles(): Promise<any[]> {
     });
   };
 
-  scanDirectory(publicImagesDir);
+  // Scan both images and videos directories
+  const imagesDir = path.join(publicDir, 'images');
+  const videosDir = path.join(publicDir, 'videos');
+  
+  scanDirectory(imagesDir);
+  scanDirectory(videosDir);
+  
   return files;
 }
