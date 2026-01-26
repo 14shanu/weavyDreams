@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { getEvents } from '@/lib/api/events';
 import { getServices } from '@/lib/api/services';
 import { getPackages } from '@/lib/api/packages';
+import blogData from '@/data/blog.json';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://weavingdreams.com';
@@ -20,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/about',
     '/contact',
     '/cart',
+    '/blog',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -48,5 +50,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...eventRoutes, ...serviceRoutes, ...packageRoutes];
+  const blogRoutes = blogData.posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  const blogCategoryRoutes = blogData.categories.map((category) => ({
+    url: `${baseUrl}/blog/category/${category.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...eventRoutes,
+    ...serviceRoutes,
+    ...packageRoutes,
+    ...blogRoutes,
+    ...blogCategoryRoutes,
+  ];
 }

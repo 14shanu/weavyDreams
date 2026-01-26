@@ -47,29 +47,29 @@ export default function QuizContainer({ quizData }: QuizContainerProps) {
   };
 
   return (
-    <section className="min-h-screen py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <section className="min-h-screen py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Container size="md">
         <FadeIn>
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-200 rounded-full text-sm font-semibold mb-4 backdrop-blur-sm border border-purple-400/30">
               🎯 Find Your Perfect Match
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
               {quiz.title}
             </h1>
-            <p className="text-xl text-gray-600">{quiz.description}</p>
+            <p className="text-xl text-purple-100">{quiz.description}</p>
           </div>
 
           <QuizProgress current={currentQuestion} total={quiz.questions.length} />
 
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-100">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-purple-200">
             <QuizQuestion
               question={currentQ}
               value={currentAnswer?.value || (currentQ.type === 'multiple-choice' ? [] : '')}
               onChange={(value) => setAnswer(currentQ.id, value)}
             />
 
-            <div className="flex justify-between mt-10 pt-8 border-t-2 border-gray-100">
+            <div className="flex justify-between mt-10 pt-8 border-t-2 border-purple-100">
               <Button
                 variant="ghost"
                 size="lg"

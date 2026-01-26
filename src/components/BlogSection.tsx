@@ -58,10 +58,10 @@ export default function BlogSection() {
                       {blogData.categories.find(c => c.id === post.category)?.name}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 hover:text-purple-600 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 hover:text-purple-600 transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
                   <span className="text-purple-600 font-medium flex items-center gap-2">
                     Read More <ArrowRight className="w-4 h-4" />
                   </span>
