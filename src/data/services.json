@@ -18,6 +18,17 @@
         "basePrice": 1500,
         "unit": "event"
       },
+      "experience": {
+        "enabled": true,
+        "theme": "camera",
+        "effects": {
+          "cameraFlash": true,
+          "filmGrain": true,
+          "aperture": false,
+          "polaroid": false
+        },
+        "colors": ["#000000", "#FFFFFF", "#9CA3AF"]
+      },
       "seo": {
         "title": "Professional Event Photography Services | Weaving Dreams",
         "description": "Capture every precious moment with our professional event photography services. High-resolution images, expert editing, and online gallery access for weddings, corporate events, and celebrations.",
@@ -161,6 +172,17 @@
       "pricing": {
         "basePrice": 1200,
         "unit": "event"
+      },
+      "experience": {
+        "enabled": true,
+        "theme": "disco",
+        "effects": {
+          "discoLights": true,
+          "equalizer": true,
+          "pulsingGradient": true,
+          "neonGlow": false
+        },
+        "colors": ["#8B5CF6", "#EC4899", "#3B82F6", "#F59E0B"]
       },
       "seo": {
         "title": "Professional Event Entertainment Services | Weaving Dreams",

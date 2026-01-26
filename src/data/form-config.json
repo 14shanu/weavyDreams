@@ -1,0 +1,56 @@
+{
+  "globalRules": {
+    "hidden": ["id", "createdAt", "updatedAt"],
+    "readonly": [],
+    "textareaMinLength": 100
+  },
+  "fieldHints": {
+    "email": "email",
+    "phone": "tel",
+    "tel": "tel",
+    "url": "url",
+    "link": "url",
+    "href": "url",
+    "color": "color",
+    "image": "text",
+    "date": "date",
+    "publishedAt": "date",
+    "createdAt": "date",
+    "updatedAt": "date"
+  },
+  "sections": {
+    "seo": {
+      "title": "SEO Settings",
+      "collapsible": true,
+      "icon": "🔍"
+    },
+    "experience": {
+      "title": "Experience Settings",
+      "collapsible": true,
+      "icon": "✨"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "collapsible": false,
+      "icon": "💰"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "collapsible": false,
+      "icon": "📞"
+    },
+    "social": {
+      "title": "Social Media",
+      "collapsible": false,
+      "icon": "🔗"
+    }
+  },
+  "labels": {
+    "siteName": "Site Name",
+    "tagline": "Tagline",
+    "description": "Description",
+    "publishedAt": "Published Date",
+    "createdAt": "Created Date",
+    "updatedAt": "Last Updated"
+  }
+}

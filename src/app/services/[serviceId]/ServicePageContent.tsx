@@ -6,6 +6,7 @@ import Container from '@/ui/layout/Container';
 import Button from '@/ui/elements/Button';
 import FadeIn from '@/ui/animations/FadeIn';
 import QuoteRequestModal from '@/ui/modals/QuoteRequestModal';
+import ServiceExperience from '@/components/ServiceExperience';
 
 interface PageProps {
   params: Promise<{ serviceId: string }>;
@@ -28,7 +29,7 @@ export default function ServicePageContent({ params }: PageProps) {
   if (!service) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-primary)]"></div></div>;
 
   return (
-    <>
+    <ServiceExperience service={service}>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 py-20">
         <Container>
@@ -94,6 +95,6 @@ export default function ServicePageContent({ params }: PageProps) {
         itemName={service.name}
         itemType="service"
       />
-    </>
+    </ServiceExperience>
   );
 }

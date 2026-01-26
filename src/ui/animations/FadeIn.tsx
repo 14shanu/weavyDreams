@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { useExperience } from '@/contexts/ExperienceContext';
 
 interface FadeInProps {
   children: ReactNode;
@@ -18,6 +19,12 @@ export default function FadeIn({
   direction = 'up',
   className,
 }: FadeInProps) {
+  const { effects, prefersReducedMotion } = useExperience();
+
+  if (!effects.animations || prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   const directions = {
     up: { y: 20 },
     down: { y: -20 },

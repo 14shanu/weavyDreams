@@ -11,6 +11,14 @@ export interface Service {
     basePrice: number;
     unit: string;
   };
+  experience?: {
+    enabled: boolean;
+    theme: string;
+    effects: {
+      [key: string]: boolean;
+    };
+    colors: string[];
+  };
   seo: {
     title: string;
     description: string;

@@ -9,6 +9,14 @@ export interface EventType {
   featured: boolean;
   packages: string[];
   services: string[];
+  experience?: {
+    enabled: boolean;
+    theme: string;
+    effects: {
+      [key: string]: boolean;
+    };
+    colors: string[];
+  };
   seo: {
     title: string;
     description: string;

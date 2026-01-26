@@ -27,6 +27,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -54,4 +72,76 @@ h6 { font-size: 1rem; }
   h1 { font-size: 3.5rem; }
   h2 { font-size: 2.5rem; }
   h3 { font-size: 1.875rem; }
+}
+
+/* Experience Animations */
+@keyframes disco-beam {
+  0%, 100% { transform: translateX(-50%) rotate(-5deg); }
+  50% { transform: translateX(50%) rotate(5deg); }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+.animate-disco-beam {
+  animation: disco-beam 8s ease-in-out infinite;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.animate-petal-fall {
+  animation: petal-fall linear infinite;
+}
+
+@keyframes bokeh-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 20px) scale(1.05);
+  }
+}
+
+.animate-bokeh-float {
+  animation: bokeh-float 20s ease-in-out infinite;
+}
+
+/* Global Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  color: #111827 !important;
+  background-color: #ffffff !important;
 }

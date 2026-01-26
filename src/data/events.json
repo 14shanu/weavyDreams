@@ -11,6 +11,16 @@
       "featured": true,
       "packages": ["wedding-essential", "wedding-premium", "wedding-luxury"],
       "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "experience": {
+        "enabled": true,
+        "theme": "romantic",
+        "effects": {
+          "petals": true,
+          "bokeh": true,
+          "sparkle": false
+        },
+        "colors": ["#FFC0CB", "#FFD700", "#FFF5EE"]
+      },
       "seo": {
         "title": "Wedding Planning Services | Weaving Dreams",
         "description": "Professional wedding planning and management services. From intimate ceremonies to grand celebrations, we bring your dream wedding to life.",
@@ -40,6 +50,15 @@
       "featured": true,
       "packages": ["corporate-essential", "corporate-premium", "corporate-luxury"],
       "services": ["photography", "videography", "catering", "venue-decoration", "entertainment", "event-coordination"],
+      "experience": {
+        "enabled": true,
+        "theme": "professional",
+        "effects": {
+          "gridLines": true,
+          "particles": false
+        },
+        "colors": ["#1E3A8A", "#3B82F6", "#60A5FA"]
+      },
       "seo": {
         "title": "Corporate Event Planning | Weaving Dreams",
         "description": "Expert corporate event planning for conferences, galas, product launches, and team building events. Professional execution guaranteed.",

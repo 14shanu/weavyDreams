@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { useExperience } from '@/contexts/ExperienceContext';
 
 interface StaggerChildrenProps {
   children: ReactNode;
@@ -14,6 +15,12 @@ export default function StaggerChildren({
   staggerDelay = 0.1,
   className,
 }: StaggerChildrenProps) {
+  const { effects, prefersReducedMotion } = useExperience();
+
+  if (!effects.animations || prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial="hidden"
@@ -34,6 +41,12 @@ export default function StaggerChildren({
 }
 
 export function StaggerItem({ children, className }: { children: ReactNode; className?: string }) {
+  const { effects, prefersReducedMotion } = useExperience();
+
+  if (!effects.animations || prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       variants={{

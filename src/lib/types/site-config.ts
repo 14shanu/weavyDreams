@@ -27,6 +27,20 @@ export interface SiteConfig {
       icon: string;
     };
   };
+  experience: {
+    enabled: boolean;
+    defaultIntensity: 'off' | 'low' | 'medium' | 'high';
+    respectReducedMotion: boolean;
+    allowUserControl: boolean;
+    persistPreferences: boolean;
+    effects: {
+      animations: boolean;
+      particles: boolean;
+      sounds: boolean;
+      customCursors: boolean;
+      backgroundEffects: boolean;
+    };
+  };
 }
 
 export interface LocalizationSettings {

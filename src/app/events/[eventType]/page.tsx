@@ -7,6 +7,7 @@ import Container from '@/ui/layout/Container';
 import PackageCard from '@/ui/components/PackageCard';
 import FadeIn from '@/ui/animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '@/ui/animations/StaggerChildren';
+import EventExperience from '@/components/EventExperience';
 
 interface PageProps {
   params: Promise<{ eventType: string }>;
@@ -52,7 +53,7 @@ export default async function EventTypePage({ params }: PageProps) {
   const packages = await getPackagesByEventType(event.id);
 
   return (
-    <>
+    <EventExperience event={event}>
       {/* Hero Section */}
       <Section background="default" spacing="lg">
         <Container>
@@ -74,7 +75,7 @@ export default async function EventTypePage({ params }: PageProps) {
       <Section background="alt">
         <Container>
           <FadeIn>
-            <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-center mb-4">
+            <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] text-gray-900 text-center mb-4">
               Our {event.name} Packages
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
@@ -91,6 +92,6 @@ export default async function EventTypePage({ params }: PageProps) {
           </StaggerChildren>
         </Container>
       </Section>
-    </>
+    </EventExperience>
   );
 }

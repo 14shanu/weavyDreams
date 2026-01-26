@@ -78,5 +78,19 @@
       "url": "https://linkedin.com/company/weavingdreams",
       "icon": "linkedin"
     }
+  },
+  "experience": {
+    "enabled": true,
+    "defaultIntensity": "medium",
+    "respectReducedMotion": true,
+    "allowUserControl": true,
+    "persistPreferences": true,
+    "effects": {
+      "animations": true,
+      "particles": false,
+      "sounds": false,
+      "customCursors": false,
+      "backgroundEffects": true
+    }
   }
 }

@@ -5,6 +5,8 @@ import { themeToCssVars } from "@/lib/theme";
 import PageShell from "@/ui/layout/PageShell";
 import { generateOrganizationSchema } from "@/lib/utils/schema";
 import { Metadata, Viewport } from "next";
+import { ExperienceProvider } from "@/contexts/ExperienceContext";
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -56,7 +58,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         />
       </head>
       <body className="bg-[var(--color-bg)] text-[var(--color-text)]">
-        <PageShell>{children}</PageShell>
+        <AuthProvider>
+          <ExperienceProvider>
+            <PageShell>{children}</PageShell>
+          </ExperienceProvider>
+        </AuthProvider>
       </body>
     </html>
   );
