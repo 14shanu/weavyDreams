@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import SkipToContent from "@/ui/components/SkipToContent";
 import ExperienceControl from "@/components/ExperienceControl";
 import PageTransition from "@/components/PageTransition";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function PageShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ export default function PageShell({ children }: { children: ReactNode }) {
       </main>
       <Footer />
       {/* <ExperienceControl /> */}
+      <WhatsAppButton />
     </div>
   );
 }

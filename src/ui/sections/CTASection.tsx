@@ -25,7 +25,7 @@ export default function CTASection({ title, description }: CTASectionProps) {
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-purple-700">
                   Contact Us
                 </Button>
               </Link>

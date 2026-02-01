@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "phoneNumber": "9784990278",
+  "countryCode": "91",
+  "defaultMessage": "Hi, I'm interested in your event planning services",
+  "pageSpecificMessages": {
+    "/": "Hi, I'd like to know more about your event planning services",
+    "/events": "Hi, I'm interested in learning about your event types",
+    "/events/weddings": "Hi, I'm interested in wedding planning services",
+    "/events/corporate-events": "Hi, I'm interested in corporate event planning",
+    "/events/private-celebrations": "Hi, I'm interested in private celebration planning",
+    "/events/exhibitions-expos": "Hi, I'm interested in exhibition and expo planning",
+    "/services": "Hi, I'd like to know more about your services",
+    "/services/photography": "Hi, I'm interested in photography services",
+    "/services/videography": "Hi, I'm interested in videography services",
+    "/services/catering": "Hi, I'm interested in catering services",
+    "/services/venue-decoration": "Hi, I'm interested in venue decoration services",
+    "/packages": "Hi, I'd like to know more about your packages",
+    "/quiz": "Hi, I have questions about the event planning quiz",
+    "/portfolio": "Hi, I'd like to discuss an event similar to your portfolio work",
+    "/about": "Hi, I'd like to know more about Weaving Dreams",
+    "/contact": "Hi, I'd like to get in touch with you"
+  },
+  "hiddenPages": ["/cart", "/admin"],
+  "position": "bottom-right",
+  "showOnMobileOnly": true
+}
