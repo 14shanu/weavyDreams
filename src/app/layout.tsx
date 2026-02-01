@@ -7,6 +7,8 @@ import { generateOrganizationSchema } from "@/lib/utils/schema";
 import { Metadata, Viewport } from "next";
 import { ExperienceProvider } from "@/contexts/ExperienceContext";
 import AuthProvider from "@/components/AuthProvider";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +65,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <PageShell>{children}</PageShell>
           </ExperienceProvider>
         </AuthProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

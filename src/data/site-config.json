@@ -133,5 +133,20 @@
       "customCursors": false,
       "backgroundEffects": true
     }
+  },
+  "analytics": {
+    "enabled": true,
+    "vercel": {
+      "enabled": true,
+      "speedInsights": true
+    },
+    "trackEvents": {
+      "pageViews": true,
+      "buttonClicks": true,
+      "formSubmissions": true,
+      "quizCompletions": true,
+      "cartActions": true,
+      "contactActions": true
+    }
   }
 }
