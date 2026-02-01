@@ -24,7 +24,7 @@ export default function PageShell({ children }: { children: ReactNode }) {
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
-      <ExperienceControl />
+      {/* <ExperienceControl /> */}
     </div>
   );
 }

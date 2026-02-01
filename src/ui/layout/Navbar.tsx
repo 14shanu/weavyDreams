@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
 
           {/* Cart Button */}
-          <Link
+          {/* <Link
             href="/cart"
             className="relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-primary)] text-[var(--color-text-dark)] text-xs font-medium hover:bg-[var(--color-primary-dark)] transition-colors"
           >
@@ -65,7 +65,7 @@ export default function Navbar() {
                 {itemCount}
               </span>
             )}
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </header>
