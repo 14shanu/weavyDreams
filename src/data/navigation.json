@@ -16,15 +16,21 @@
   ],
   "footer": {
     "copyrightLabel": "Weaving Dreams. All rights reserved.",
-    "rightText": "Creating unforgettable events since 2024.",
+    "rightText": "Creating unforgettable events since 2019.",
     "columns": [
       {
         "title": "Event Types",
         "links": [
           { "label": "Weddings", "href": "/events/weddings" },
           { "label": "Corporate Events", "href": "/events/corporate-events" },
-          { "label": "Private Celebrations", "href": "/events/private-celebrations" },
-          { "label": "Exhibitions & Expos", "href": "/events/exhibitions-expos" }
+          {
+            "label": "Private Celebrations",
+            "href": "/events/private-celebrations"
+          },
+          {
+            "label": "Exhibitions & Expos",
+            "href": "/events/exhibitions-expos"
+          }
         ]
       },
       {
